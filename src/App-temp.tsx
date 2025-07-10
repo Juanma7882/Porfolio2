@@ -1,6 +1,6 @@
 import '../src/styles/index.css'
-import Home from './Home.tsx';
-import Navbar from './Navbar.tsx';
+import Home from './Home-tem.tsx';
+import Navbar from './Navbar-tem.tsx';
 import './assets/language/changeLanguage.ts'
 
 
