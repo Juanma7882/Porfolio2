@@ -1,4 +1,4 @@
-import DarkModeToggle from './darkModeToggle';
+import DarkModeToggle from '../src/darkModeToggle';
 // import './index.css'
 import '../src/styles/index.css'
 import { useTranslation } from 'react-i18next';
