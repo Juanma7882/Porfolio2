@@ -1,7 +1,6 @@
-// import './index.css'
 import '../src/styles/index.css'
-import Home from './home';
-import Navbar from './navbar';
+import Home from './Home.tsx';
+import Navbar from './Navbar.tsx';
 import './assets/language/changeLanguage.ts'
 
 
