@@ -1,0 +1,19 @@
+{
+    "navbar": {
+        "home": "Home",
+        "about": "About me",
+        "projects": "Projects",
+        "technology": "Technology",
+        "contact": "Contact me"
+    },
+    "home": {
+        "status": "Open to Work",
+        "title": "Fernandez Juan",
+        "role": {
+            "prefix": "Software ",
+            "suffix": "Developer"
+        },
+        "paragraph": "Seeking new <0>professional opportunities</0> with <1>challenging</1> projects that promote my <2>professional growth</2>. I'm interested in joining <3>teams</3> where I can <4>apply</4> and <5>enhance</5> my skills as a developer.",
+        "download": "Download CV"
+    }
+}
