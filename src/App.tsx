@@ -1,4 +1,5 @@
 import '../src/styles/index.css'
+import AboutMe from './AboutMe.tsx';
 import Home from './Home.tsx';
 import Navbar from './Navbar.tsx';
 import './assets/language/changeLanguage.ts'
@@ -10,8 +11,9 @@ function App() {
             <header>
                 <Navbar />
             </header>
-            <main>
+            <main className='relative'>
                 <Home />
+                <AboutMe />
             </main>
 
         </>
