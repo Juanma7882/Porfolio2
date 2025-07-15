@@ -3,16 +3,16 @@ import '../src/styles/index.css'
 function AboutMe() {
     return (
 
-        <section className="dark:text-white dark:bg-black min-h-screen ">
+        <section className="dark:text-white dark:bg-black min-h-screen flex items-star justify-center flex-col px-4">
             <h2 className=" mb-4 text-2xl sm:text-4xl md:text-5xl lg:text-7xl">About Me</h2>
             <div className='flex items-center justify-center px-4 '>
 
                 <div className="flex flex-col md:flex-row items-center justify-center gap-10 max-w-6xl mx-auto">
 
                     {/* Imagen */}
-                    <div className="w-auto h-auto relative">
+                    <div className="h-[70vh] w-auto max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg flex items-center justify-center">
                         <img
-                            className="w-full h-full object-cover rounded-xl shadow-lg"
+                            className="h-full w-auto object-contain rounded-xl shadow-lg md:h-auto lg:h-full"
                             src="/JuanFernandez.png"
                             alt="Fernandez Juan"
                             title="Fernandez Juan"
