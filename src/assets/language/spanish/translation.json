@@ -15,5 +15,11 @@
         },
         "paragraph": "En búsqueda de nuevas <0>oportunidades profesionales</0> con proyectos <1>desafiantes</1> que impulsen mi <2>crecimiento profesional</2>. Me interesa formar parte de <3>equipos de trabajo</3> donde pueda <4>aplicar</4> y <5>perfeccionar</5> mis habilidades como desarrollador.",
         "download": "Descargar CV"
+    },
+    "about": {
+        "title": "Sobre mi",
+        "intro": "Soy Juan Manuel Fernández, soy un desarrollador full stack de Buenos Aires, Argentina. Actualmente estoy cursando el último año de la Tecnicatura en Programación en la Universidad Tecnológica Nacional.",
+        "skillsIntro": " Estoy en busca de nuevas oportunidades que me permitan seguir creciendo profesionalmente. Mis lenguajes favoritos son Python, C# y JavaScript.",
+        "experience": "Actualmente tengo un nivel B2 en inglés y estoy en constante mejora. Trabajo como desarrollador independiente, relevando requerimientos y diseñando soluciones con sistemas que sean intuitivos y fáciles de usar para el usuario."
     }
 }

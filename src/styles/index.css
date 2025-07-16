@@ -2,10 +2,13 @@
 
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
-@tailwind base;
-@tailwind components;
+/* @tailwind base; */
+/* @tailwind components; */
 @tailwind utilities;
 
+* {
+  /* border: 1px green solid; */
+}
 /* ? circle open to work */
 .ripple::before {
   content: "";
@@ -124,7 +127,7 @@
     transform: scale(1);
   }
 }
-
+/* 
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -140,4 +143,5 @@
 .animate-gradient {
   animation: gradient 3s ease infinite;
   transition: all 1s;
-}
+} */
+

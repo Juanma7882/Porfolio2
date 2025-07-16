@@ -15,5 +15,11 @@
         },
         "paragraph": "Seeking new <0>professional opportunities</0> with <1>challenging</1> projects that promote my <2>professional growth</2>. I'm interested in joining <3>teams</3> where I can <4>apply</4> and <5>enhance</5> my skills as a developer.",
         "download": "Download CV"
+    },
+    "about": {
+        "title": "About Me",
+        "intro": "My name is Juan Manuel Fernández, and I’m a full stack developer from Buenos Aires, Argentina. I’m currently in my final year of the Programming Technician program at the National Technological University.",
+        "skillsIntro": "I’m looking for new opportunities that will allow me to continue growing professionally. My favorite programming languages are Python, C#, and JavaScript.",
+        "experience": "I currently have a B2 level in English and I’m constantly improving. I work as an independent developer, gathering requirements and designing solutions with systems that are intuitive and easy for users to use."
     }
 }
