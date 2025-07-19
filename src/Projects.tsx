@@ -1,6 +1,7 @@
 // Import Swiper React components
 // import { Swiper, SwiperSlide } from 'swiper/react';
 
+
 import { proyectos } from './data/proyectos';
 import ProyectoCard from './components/ProyectoCard';
 

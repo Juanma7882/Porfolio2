@@ -1,5 +1,7 @@
 import { technologyIcons } from './icons'; 
-export const proyectos = [
+import type { Proyecto } from '../types';
+
+export const proyectos:Proyecto[] = [
   {
     titulo: "Aplicación del clima",
     descripcion: "Aplicación del clima desarrollada con JavaScript. Permite consultar el clima actual junto con información adicional, como el pronóstico por horas y para los próximos seis días, consumiendo múltiples APIs.",

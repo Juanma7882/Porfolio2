@@ -1,21 +1,7 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-
-
-
-type Tecnologia = {
-    nombre: string;
-    icono: string;
-};
-
-type Proyecto = {
-    titulo: string;
-    descripcion: string;
-    imagenes: string[];
-    tecnologias: Tecnologia[];
-    github: string;
-};
+import type { Proyecto } from '../types';
 
 const ProyectoCard = ({ proyecto }: { proyecto: Proyecto }) => {
     console.log(proyecto.tecnologias.map((tec) => tec.nombre));
