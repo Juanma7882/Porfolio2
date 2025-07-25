@@ -4,7 +4,7 @@ import type { Proyecto } from '../types';
 export const proyectos:Proyecto[] = [
   {
     titulo: "Aplicación del clima",
-    descripcion: "Aplicación del clima desarrollada con JavaScript. Permite consultar el clima actual junto con información adicional, como el pronóstico por horas y para los próximos seis días, consumiendo múltiples APIs.",
+    descripcion: "Aplicación del clima desarrollada con JavaScript. Permite consultar el clima actual junto con información adicional, ademas te permite visualizar el pronóstico por horas y para los próximos seis días ademas del actual, consumiendo múltiples APIs.",
     imagenes: [
       "/src/img/dispositivos/notebookclima1.png",
       "/src/img/dispositivos/notebookclima2.png",
@@ -43,7 +43,7 @@ export const proyectos:Proyecto[] = [
       "/src/img/concesionaria/imgInicio.jpg",
       "/src/img/concesionaria/imgMenu.png",
       "/src/img/concesionaria/vehiculos.png",
-      "/src/img/concesionaria/Agregar Vehiculo.png"
+      "/src/img/concesionaria/Agregar Vechiculo.png"
     ],
     tecnologias: [
       {
