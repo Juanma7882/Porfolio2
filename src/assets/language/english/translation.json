@@ -21,5 +21,23 @@
         "intro": "My name is Juan Manuel Fernández, and I’m a full stack developer from Buenos Aires, Argentina. I’m currently in my final year of the Programming Technician program at the National Technological University.",
         "skillsIntro": "I’m looking for new opportunities that will allow me to continue growing professionally. My favorite programming languages are Python, C#, and JavaScript.",
         "experience": "I currently have a B2 level in English and I’m constantly improving. I work as an independent developer, gathering requirements and designing solutions with systems that are intuitive and easy for users to use."
+    },
+    "projects": {
+        "weatherApp": {
+            "title": "Weather App",
+            "description": "Weather application developed with JavaScript. It allows you to check the current weather along with additional information. You can also view the hourly forecast and the forecast for the next six days, using multiple APIs."
+        },
+        "dealershipManager": {
+            "title": "dealership Manager",
+            "description": "Application for managing a car dealership. It allows user, role, and permission validation. Developed in C# with the .NET Framework, it is integrated with a database and unit tests. It is a fully functional application."
+        },
+        "pygame": {
+            "title": "Pygame",
+            "description": "Game developed in Python using Pygame. It applies object-oriented programming (OOP) and basic artificial intelligence to define enemy behavior. It features three levels with different enemies, offering a challenging and entertaining experience."
+        },
+        "blog": {
+            "title": "Blog API",
+            "description": "Backend for a note-taking application, developed with .NET Core and SQL Server. Data management is handled through Entity Framework Core (EF Core), enabling smooth and secure interaction with domain entities."
+        }
     }
 }

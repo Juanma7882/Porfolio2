@@ -21,5 +21,23 @@
         "intro": "Soy Juan Manuel Fernández, soy un desarrollador full stack de Buenos Aires, Argentina. Actualmente estoy cursando el último año de la Tecnicatura en Programación en la Universidad Tecnológica Nacional.",
         "skillsIntro": " Estoy en busca de nuevas oportunidades que me permitan seguir creciendo profesionalmente. Mis lenguajes favoritos son Python, C# y JavaScript.",
         "experience": "Actualmente tengo un nivel B2 en inglés y estoy en constante mejora. Trabajo como desarrollador independiente, relevando requerimientos y diseñando soluciones con sistemas que sean intuitivos y fáciles de usar para el usuario."
+    },
+    "projects": {
+        "weatherApp": {
+            "title": "Aplicación del Clima",
+            "description": "Esta es una aplicación del clima desarrollada con JavaScript. Permite consultar el clima actual junto con información adicional, además de proporcionar el pronóstico por horas y para los próximos seis días de la semana consumiendo varias APIs."
+        },
+        "dealershipManager": {
+            "title": "administrador de concesionaria",
+            "description": " Este proyecto permite gestionar una concesionaria de vehículos, validando distintos usuarios, roles y permisos. Está desarrollado en C# con .NET Framework e incluye integración con bases de datos y pruebas unitarias. Es una aplicación completamente funcional."
+        },
+        "pygame": {
+            "title": "Pygame",
+            "description": " Juego desarrollado en Python utilizando Pygame. Utiliza programación orientada a objetos (POO) e inteligencia artificial básica para definir el comportamiento de los enemigos. Cuenta con tres niveles con enemigos distintos, ofreciendo una experiencia desafiante y entretenida."
+        },
+        "blog": {
+            "title": "API de un Blog",
+            "description": " Backend para una aplicación de blog de notas, desarrollado con .NET Core y SQL Server. La gestión de datos se realiza mediante Entity Framework Core (EF Core), lo que permite una interacción fluida y segura con las entidades del dominio."
+        }
     }
 }

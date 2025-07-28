@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import '../src/styles/index.css'
+// import '../src/styles/index.css'
+import '../../styles/index.css'; // Importación correcta del CSS global
 
 function AboutMe() {
     // const { t } = useTranslation();
@@ -7,7 +8,7 @@ function AboutMe() {
     return (
 
         <section className="dark:text-white dark:bg-black min-h-screen flex items-star justify-center flex-col px-4">
-            <h2 className="w-full mb-4 text-4xl sm:text-4xl md:text-5xl lg:text-6xl px-4 text-center">{t("about.title")}</h2>
+            <h2 className="w-full mb-4 text-4xl sm:text-3xl md:text-4xl lg:text-5xl px-4 text-center">{t("about.title")}</h2>
 
             <div className='flex items-center justify-center px-4 '>
 

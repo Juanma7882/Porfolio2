@@ -1,9 +1,10 @@
 import '../src/styles/index.css'
-import AboutMe from './AboutMe.tsx';
-import Home from './Home.tsx';
+import AboutMe from './pages/main/AboutMe.tsx';
+import Home from './pages/main/Home.tsx';
 import Navbar from './Navbar.tsx';
-import Projects from './Projects.tsx';
+// import Projects from './Projects.tsx';
 import './assets/language/changeLanguage.ts'
+import Projects from './pages/main/Projects.tsx';
 
 
 function App() {

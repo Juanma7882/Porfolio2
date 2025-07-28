@@ -3,8 +3,8 @@ import type { Proyecto } from '../types';
 
 export const proyectos:Proyecto[] = [
   {
-    titulo: "Aplicación del clima",
-    descripcion: "Aplicación del clima desarrollada con JavaScript. Permite consultar el clima actual junto con información adicional, ademas te permite visualizar el pronóstico por horas y para los próximos seis días ademas del actual, consumiendo múltiples APIs.",
+    titulo: "projects.weatherApp.title", 
+    descripcion: "projects.weatherApp.description",
     imagenes: [
       "/src/img/dispositivos/notebookclima1.png",
       "/src/img/dispositivos/notebookclima2.png",
@@ -37,8 +37,8 @@ export const proyectos:Proyecto[] = [
     pagina: "https://clima-cyan.vercel.app/"
   },
   {
-    titulo: "Gestor de concesionaria",
-    descripcion: "Aplicación para gestionar una concesionaria de vehículos. Permite validar usuarios, roles y permisos. Está desarrollada en C# con .NET Framework, integrada con una base de datos y pruebas unitarias. Es una aplicación completamente funcional.",
+    titulo: "projects.dealershipManager.title",
+    descripcion: "projects.dealershipManager.description",
     imagenes: [
       "/src/img/concesionaria/imgInicio.jpg",
       "/src/img/concesionaria/imgMenu.png",
@@ -60,8 +60,8 @@ export const proyectos:Proyecto[] = [
     pagina: ""
   },
   {
-    titulo: "Juego en Pygame",
-    descripcion: "Juego desarrollado en Python utilizando Pygame. Utiliza programación orientada a objetos (POO) e inteligencia artificial básica para definir el comportamiento de los enemigos. Cuenta con tres niveles con enemigos distintos, ofreciendo una experiencia desafiante y entretenida.",
+    titulo: "projects.pygame.title",
+    descripcion: "projects.pygame.description",
     imagenes: [
       "/src/img/pygame/mainGame.png",
       "/src/img/pygame/level1game.png",
@@ -81,8 +81,8 @@ export const proyectos:Proyecto[] = [
     pagina: ""
   },
   {
-    titulo: "API Blog de Notas",
-    descripcion: "Backend para una aplicación de blog de notas, desarrollado con .NET Core y SQL Server. La gestión de datos se realiza mediante Entity Framework Core (EF Core), lo que permite una interacción fluida y segura con las entidades del dominio.",
+    titulo: "projects.blog.title",
+    descripcion: "projects.blog.description",
     imagenes: [
       "/src/img/Blog/Enpoints.png",
       "/src/img/Blog/Enpoints1.png"

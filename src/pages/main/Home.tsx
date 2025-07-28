@@ -1,5 +1,8 @@
 import { useTranslation, Trans } from 'react-i18next';
-import '../src/styles/index.css';
+// import '../src/styles\index.css';
+import '../../styles/index.css'; // Importación correcta del CSS global
+
+
 
 function Home() {
   const { t } = useTranslation();
