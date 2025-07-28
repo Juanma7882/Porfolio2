@@ -38,7 +38,7 @@ const ProyectoCard = ({ proyecto }: { proyecto: Proyecto }) => {
                     >
                         {proyecto.imagenes.map((img, index) => (
                             <SwiperSlide key={index}>
-                                <img src={img} alt={`slide-${index}`} className="swiper-slide " />
+                                <img src={img} alt={`slide-${index}`} className="swiper-slide " title={t(`projects.${proyecto.titulo}.images.${index}`)} />
 
                             </SwiperSlide>
                         ))}

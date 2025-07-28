@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import '../../styles/index.css'; // Importación correcta del CSS global
 
 function AboutMe() {
-    // const { t } = useTranslation();
     const { t } = useTranslation();
     return (
 
