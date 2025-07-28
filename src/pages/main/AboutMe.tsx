@@ -18,7 +18,7 @@ function AboutMe() {
                     <div className="h-auto w-auto max-w-xs  lg:max-w-md xl:max-w-lg flex items-center justify-center flex-col md:max-w-sm xl:h-130">
                         <img
                             className="h-auto w-auto object-contain rounded-xl shadow-lg md:h-auto lg:h-full"
-                            src="/JuanFernandez.png"
+                            src="/public/img/FernandezJuan optimization.webp"
                             alt="Fernandez Juan"
                             title="Fernandez Juan"
                         />

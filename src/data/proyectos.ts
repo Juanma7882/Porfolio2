@@ -6,13 +6,13 @@ export const proyectos:Proyecto[] = [
     titulo: "projects.weatherApp.title", 
     descripcion: "projects.weatherApp.description",
     imagenes: [
-      "/src/img/dispositivos/notebookclima1.png",
-      "/src/img/dispositivos/notebookclima2.png",
-      "/src/img/dispositivos/tableclima1.png",
-      "/src/img/dispositivos/tableclima2.png",
-      "/src/img/dispositivos/celularclima1.png",
-      "/src/img/dispositivos/celularclima2.png",
-      "/src/img/dispositivos/celularclima3.png"
+      "/public/img/projects/weather/notebookclima1.webp",
+      "/public/img/projects/weather/notebookclima2.webp",
+      "/public/img/projects/weather/tableclima1.webp",
+      "/public/img/projects/weather/tableclima2.webp",
+      "/public/img/projects/weather/celularclima1.webp",
+      "/public/img/projects/weather/celularclima2.webp",
+      "/public/img/projects/weather/celularclima3.webp"
     ],
     tecnologias: [
       {
@@ -40,10 +40,10 @@ export const proyectos:Proyecto[] = [
     titulo: "projects.dealershipManager.title",
     descripcion: "projects.dealershipManager.description",
     imagenes: [
-      "/src/img/concesionaria/imgInicio.jpg",
-      "/src/img/concesionaria/imgMenu.png",
-      "/src/img/concesionaria/vehiculos.png",
-      "/src/img/concesionaria/Agregar Vechiculo.png"
+      "/public/img/projects/dealership/imgInicio.webp",
+      "/public/img/projects/dealership/imgMenu.webp",
+      "/public/img/projects/dealership/vehiculos.webp",
+      "/public/img/projects/dealership/Agregar Vechiculo.webp"
     ],
     tecnologias: [
       {
@@ -63,13 +63,13 @@ export const proyectos:Proyecto[] = [
     titulo: "projects.pygame.title",
     descripcion: "projects.pygame.description",
     imagenes: [
-      "/src/img/pygame/mainGame.png",
-      "/src/img/pygame/level1game.png",
-      "/src/img/pygame/level2game.png",
-      "/src/img/pygame/level3game.png",
-      "/src/img/pygame/gamepause.png",
-      "/src/img/pygame/gameTop5.png",
-      "/src/img/pygame/loseGame.png"
+      "/public/img/projects/pygame/mainGame.webp",
+      "/public/img/projects/pygame/level1game.webp",
+      "/public/img/projects/pygame/level2game.webp",
+      "/public/img/projects/pygame/level3game.webp",
+      "/public/img/projects/pygame/gamepause.webp",
+      "/public/img/projects/pygame/gameTop5.webp",
+      "/public/img/projects/pygame/loseGame.webp"
     ],
     tecnologias: [
       {
@@ -84,8 +84,8 @@ export const proyectos:Proyecto[] = [
     titulo: "projects.blog.title",
     descripcion: "projects.blog.description",
     imagenes: [
-      "/src/img/Blog/Enpoints.png",
-      "/src/img/Blog/Enpoints1.png"
+      "/public/img/projects/blog/Enpoints.webp",
+      "/public/img/projects/blog/Enpoints1.webp"
     ],
     tecnologias: [
       {
