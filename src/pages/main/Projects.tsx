@@ -18,7 +18,7 @@ import ProyectoCard from '../../components/ProyectoCard';
 function Projects() {
     return (
         <>
-            <section id="proyectos" className='bg-white dark:bg-black dark:text-white min-h-screen flex items-center justify-center flex-col px-4'>
+            <section id="projects" className='bg-white dark:bg-black dark:text-white min-h-screen flex items-center justify-center flex-col px-4 gap-10 scroll-mt-20'>
                 <h2 className='w-full mb-4 text-4xl sm:text-3xl md:text-4xl lg:text-5xl px-4 text-center'>Mis Proyectos</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:mx-10 xl:mx-20">
                     {proyectos.map((proyecto, index) => (

@@ -8,11 +8,11 @@ function Home() {
   const { t } = useTranslation();
 
   return (
-    <section className='relative'>
+    <section id='home' className='relative '>
       <div className=' inset-0 -z-10 matrix-bg  dark:bg-black '>
         <div className="min-h-screen flex flex-col items-center justify-center ">
           {/* open to work */}
-          <div className="bg-green-100 flex items-center justify-center p-2 py-2 px-4 rounded-xl justify-evenly dark:border-2 dark:bg-green-900/30">
+          <div className="bg-green-100 flex items-center justify-center p-2 py-2 px-4 rounded-xl dark:border-2 dark:bg-green-900/30">
             <span className="inline-block mr-2 h-2 w-2 rounded-full bg-emerald-500 relative ripple dark:bg-emerald-400"></span>
             <span className="text-green-600 dark:text-green-400">{t("home.status")}</span>
           </div>
@@ -34,7 +34,7 @@ function Home() {
                       </span>
                     ))}
                 </span>
-                <span className="text-black text-gray-800 dark:text-gray-100">
+                <span className=" text-gray-800 dark:text-gray-100">
                   {t("home.role.suffix")
                     .split("")
                     .map((char, idx) => (

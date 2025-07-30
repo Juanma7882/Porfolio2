@@ -3,7 +3,7 @@
         "home": "Home",
         "about": "About me",
         "projects": "Projects",
-        "technology": "Technology",
+        "technology": "Technologies",
         "contact": "Contact me"
     },
     "home": {
@@ -39,5 +39,12 @@
             "title": "Blog API",
             "description": "Backend for a note-taking application, developed with .NET Core and SQL Server. Data management is handled through Entity Framework Core (EF Core), enabling smooth and secure interaction with domain entities."
         }
+    },
+    "technologies": {
+        "title": "Technologies",
+        "fronted": "Frontend",
+        "backend": "Backend",
+        "tools": "Tools",
+        "others": "Others"
     }
 }

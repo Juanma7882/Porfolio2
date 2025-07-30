@@ -11,19 +11,31 @@ function Navbar() {
   };
   return (
     <nav className="w-full py-4 px-6 bg-white shadow-md z-10 fixed top-0 dark:text-white dark:bg-black">
+      {/* // <nav className="sticky top-400 z-50 bg-white dark:bg-black shadow-md py-4 px-6 w-full"> */}
+
       <div className="flex items-center justify-between max-w-7xl mx-auto">
 
         {/* Menú Izquierdo */}
         <ul className="flex gap-6 text-gray-800 font-medium text-sm sm:text-base dark:text-gray-100">
-          <li className="hover:text-blue-500 cursor-pointer">{t("navbar.home")}</li>
-          <li className="hover:text-blue-500 cursor-pointer">{t("navbar.about")}</li>
-          <li className="hover:text-blue-500 cursor-pointer">{t("navbar.projects")}</li>
-          <li className="hover:text-blue-500 cursor-pointer">{t("navbar.technology")}</li>
+          <li className="hover:text-blue-500 cursor-pointer" >
+            <a href="#home">{t("navbar.home")}</a>
+          </li>
+          <li className="hover:text-blue-500 cursor-pointer">
+            <a href="#about">{t("navbar.about")}</a>
+          </li>
+          <li className="hover:text-blue-500 cursor-pointer">
+            <a href="#projects">{t("navbar.projects")}</a>
+          </li>
+          <li className="hover:text-blue-500 cursor-pointer">
+            <a href="#technologies">{t("navbar.technology")}</a>
+          </li>
         </ul>
 
         {/* Menú Derecho */}
         <ul className="flex gap-4 items-center justify-center text-gray-800 font-medium text-sm sm:text-base  dark:text-gray-100">
-          <li className="hover:text-blue-500 cursor-pointer">{t("navbar.contact")}</li>
+          <li className="hover:text-blue-500 cursor-pointer">
+            <a href="#contact">{t("navbar.contact")}</a>
+          </li>
 
           <li className='flex items-center justify-center'><DarkModeToggle /></li>
 

@@ -12,9 +12,6 @@ import { useTranslation } from 'react-i18next';
 const ProyectoCard = ({ proyecto }: { proyecto: Proyecto }) => {
     const { t } = useTranslation();
 
-
-
-    // console.log(t.map("projects" => key));
     return (
         <div className=" flex flex-col align-center text-center border-1  border-gray-500 dark:border-white border-solid m-3  rounded-2xl">
             <h3 className='text-2xl py-4.5'>{t(proyecto.titulo)}</h3>

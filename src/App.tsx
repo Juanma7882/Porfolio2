@@ -5,6 +5,8 @@ import Navbar from './Navbar.tsx';
 // import Projects from './Projects.tsx';
 import './assets/language/changeLanguage.ts'
 import Projects from './pages/main/Projects.tsx';
+import Technology from './pages/main/Technology.tsx';
+import ContactMe from './pages/main/ContactMe.tsx';
 
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
                 <Home />
                 <AboutMe />
                 <Projects />
+                <Technology />
+                <ContactMe/>
             </main>
 
         </>

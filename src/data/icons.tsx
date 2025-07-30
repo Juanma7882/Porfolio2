@@ -162,7 +162,7 @@ export const technologyIcons: Tecnologia[] = [
   {
     nombre: "Git",
     icono: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 48 48" className="w-full h-full">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 48 48" className="w-full h-full" >
         <path fill="#F4511E" d="M42.2,22.1L25.9,5.8C25.4,5.3,24.7,5,24,5c0,0,0,0,0,0c-0.7,0-1.4,0.3-1.9,0.8l-3.5,3.5l4.1,4.1c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3c0,0.5-0.1,0.9-0.3,1.3l4,4c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3s-1.3,3-3,3c-1.7,0-3-1.3-3-3c0-0.5,0.1-0.9,0.3-1.3l-4-4c-0.1,0-0.2,0.1-0.3,0.1v10.4c1.2,0.4,2,1.5,2,2.8c0,1.7-1.3,3-3,3s-3-1.3-3-3c0-1.3,0.8-2.4,2-2.8V18.8c-1.2-0.4-2-1.5-2-2.8c0-0.5,0.1-0.9,0.3-1.3l-4.1-4.1L5.8,22.1C5.3,22.6,5,23.3,5,24c0,0.7,0.3,1.4,0.8,1.9l16.3,16.3c0,0,0,0,0,0c0.5,0.5,1.2,0.8,1.9,0.8s1.4-0.3,1.9-0.8l16.3-16.3c0.5-0.5,0.8-1.2,0.8-1.9C43,23.3,42.7,22.6,42.2,22.1z" />
       </svg>
     )
@@ -170,7 +170,7 @@ export const technologyIcons: Tecnologia[] = [
   {
     nombre: "GitHub",
     icono: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 48 48" className="w-full h-full">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 48 48" fill="currentColor" className="w-full h-full text-gray-800 dark:text-white">
         <path d="M24 4C12.972 4 4 12.972 4 24c0 11.028 8.972 20 20 20 11.028 0 20-8.972 20-20 0-11.028-8.972-20-20-20zm0 3c9.407 0 17 7.593 17 17 0 7.665-5.043 14.123-12 16.252v-5.115c0-1.91-1.101-3.548-2.691-4.363a10 8 0 0 0 6.129-12.053c.444-1.365.939-3.76-.238-5.644-2.27 0-3.735 1.556-4.434 2.523a10 8 0 0 0-3.765-.6 10 8 0 0 0-3.77.594c-.7-1.032-2.164-2.582-4.43-2.582-1.35 2.163-.52 4.488-.072 5.438a10 8 0 0 0 5.949 12.266c-1.306.673-2.284 1.895-2.584 3.377h-1.314c-1.3 0-1.804-.527-2.505-1.416-.712-.889-1.456-1.486-2.35-1.734-.482-.051-.807.316-.387.641 1.419.966 1.517 2.547 2.086 3.582.518.932 1.579 1.772 2.779 1.772h1.57v3.252c-6.957-2.129-12-9.586-12-17.252 0-9.407 7.593-17 17-17z" />
       </svg>
     )
@@ -211,6 +211,60 @@ export const technologyIcons: Tecnologia[] = [
         <path fill="#a01c1c" d="M34.082,11.963c-0.005,1.596-0.01,3.191-0.015,4.787c1.967-0.783,3.934-1.565,5.901-2.348 C38.006,13.589,36.044,12.776,34.082,11.963z"></path>
       </svg>
     )
-  }
+  },
+  {
+    nombre: "Angular",
+    icono: (
+      <img src="/icons/angular.svg" alt="Icon Angular" className="w-full h-full object-contain" />
+    )
+  },
+  {
+    nombre: "Docker",
+    icono: (
+      <img src="/icons/docker.svg" alt="Icon Docker" className="w-full h-full object-contain" />
+    )
+  },
+  {
+    nombre: "AWS",
+    icono: (
+      <img src="/icons/aws.svg" alt="Icon AWS" className="w-full h-full object-contain" />
+    )
+  },
+  {
+    nombre: "Azure",
+    icono: (
+      <img src="/icons/azure.svg" alt="Icon Azure" className="w-full h-full object-contain" />
+    )
+  },
+  {
+    nombre: "Figma",
+    icono: (
+      <img src="/icons/figma.svg" alt="Icon Figma" className="w-full h-full object-contain" />
+    )
+  },
+  {
+    nombre: "Kubernetes",
+    icono: (
+      <img src="/icons/kubernetes.svg" alt="Icon Kubernetes" className="w-full h-full object-contain" />
+    )
+  },
+  {
+    nombre: "Linux",
+    icono: (
+      <img src="/icons/linux.svg" alt="Icon Linux" className="w-full h-full object-contain" />
+    )
+  },
+  {
+    nombre: "Postman",
+    icono: (
+      <img src="/icons/postman.svg" alt="Icon Postman" className="w-full h-full object-contain" />
+    )
+  },
+  {
+    nombre: "SQL",
+    icono: (
+      <img src="/icons/SQL.svg" alt="Icon SQL" className="w-full h-full object-contain " />
+    )
+  },
 
 ];

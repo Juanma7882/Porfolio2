@@ -39,5 +39,12 @@
             "title": "API de un Blog",
             "description": " Backend para una aplicación de blog de notas, desarrollado con .NET Core y SQL Server. La gestión de datos se realiza mediante Entity Framework Core (EF Core), lo que permite una interacción fluida y segura con las entidades del dominio."
         }
+    },
+    "technologies": {
+        "title": "Tecnologías",
+        "fronted": "Frontend",
+        "backend": "Backend",
+        "tools": "Herramientas",
+        "others": "Otros"
     }
 }
