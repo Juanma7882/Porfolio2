@@ -46,5 +46,10 @@
         "backend": "Backend",
         "tools": "Tools",
         "others": "Others"
+    },
+    "contactMe": {
+        "title": "Contact me",
+        "socialNetworks": "Social networks",
+        "downloadCv": "Download CV"
     }
 }

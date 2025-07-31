@@ -46,5 +46,10 @@
         "backend": "Backend",
         "tools": "Herramientas",
         "others": "Otros"
+    },
+    "contactMe": {
+        "title": "Contactarme",
+        "socialNetworks": "Redes sociales",
+        "downloadCv": "Descargar CV"
     }
 }
