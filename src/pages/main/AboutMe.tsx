@@ -7,7 +7,7 @@ function AboutMe() {
     const { t } = useTranslation();
     return (
 
-        <section id='about' className="dark:text-white dark:bg-black min-h-screen flex items-star justify-center flex-col px-4 ">
+        <section id='about' className="dark:text-white dark:bg-black min-h-screen flex items-star justify-center flex-col px-4 pt-11">
             <h2 className="w-full mb-4 text-4xl sm:text-3xl md:text-4xl lg:text-5xl px-4 text-center">{t("about.title")}</h2>
 
             <div className='flex items-center justify-center px-4 '>
