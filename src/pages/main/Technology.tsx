@@ -44,7 +44,6 @@ const tecnologiasPorCategoria: Categoria[] = [
         titulo: "technologies.others",
         tecnologias: [
             { nombre: "Docker", icono: technologyIcons.find(t => t.nombre === "Docker")?.icono! },
-            { nombre: "Azure", icono: technologyIcons.find(t => t.nombre === "Azure")?.icono! },
             { nombre: "TypeScript", icono: technologyIcons.find(t => t.nombre === "TypeScript")?.icono! },
             { nombre: "Linux", icono: technologyIcons.find(t => t.nombre === "Linux")?.icono! },
         ]
