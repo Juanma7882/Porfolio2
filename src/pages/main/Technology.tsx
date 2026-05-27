@@ -4,6 +4,7 @@ import { technologyIcons } from "../../data/icons";
 type Tecnologia = {
     nombre: string;
     icono: React.ReactNode;
+    colors?: string[];
 };
 
 type Categoria = {

@@ -39,6 +39,26 @@
         "blog": {
             "title": "API de un Blog",
             "description": " Backend para una aplicación de blog de notas, desarrollado con .NET Core y SQL Server. La gestión de datos se realiza mediante Entity Framework Core (EF Core), lo que permite una interacción fluida y segura con las entidades del dominio."
+        },
+        "restaurant": {
+            "title": "Restaurante",
+            "description": "Aplicación móvil para la gestión de pedidos de restaurantes, desarrollada con Ionic y Angular. El sistema optimiza todo el flujo de trabajo de los pedidos, desde la realización del pedido hasta la preparación en cocina y la entrega, mejorando la eficiencia operativa y la coordinación del equipo."
+        },
+        "self-service-for-hotel": {
+            "title": "Auto servicio para hotel",
+            "description": "Aplicación de autoservicio para hoteles diseñada para simplificar la selección y reserva de habitaciones mediante interacción en totems, reduciendo los tiempos de espera y mejorando la autonomía del huésped."
+        },
+        "E-commerce": {
+            "title": "E-commerce",
+            "description": ""
+        },
+        "hackathon": {
+            "title": "Hackathon",
+            "description": "Plataforma de simulación de entrevistas técnicas impulsada por IA, desarrollada con React, Node.js y PostgreSQL. El sistema evalúa respuestas abiertas utilizando modelos transformadores, proporcionando análisis semántico, puntuación y retroalimentación personalizada para la preparación de entrevistas de software."
+        },
+        "PowerType": {
+            "title": "PowerType",
+            "description": "Contributed to an open-source PowerShell autocomplete tool by extending command dictionaries and improving CLI command support, enhancing the developer experience for terminal productivity"
         }
     },
     "technologies": {

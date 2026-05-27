@@ -1,4 +1,6 @@
 import '../src/styles/index.css'
+import { useEffect, useState } from 'react';
+
 import AboutMe from './pages/main/AboutMe.tsx';
 import Home from './pages/main/Home.tsx';
 import Navbar from './Navbar.tsx';
@@ -9,7 +11,30 @@ import Technology from './pages/main/Technology.tsx';
 import ContactMe from './pages/main/ContactMe.tsx';
 
 
+
+
 function App() {
+    const [theme, setTheme] = useState('light');
+
+    useEffect(() => {
+        const localStorageTheme = localStorage.getItem('theme')
+        if (!localStorageTheme) {
+            const systemTheme = window.matchMedia(
+                "(prefers-color-scheme: dark)"
+            ).matches
+                ? "dark"
+                : "light";
+
+            localStorage.setItem('theme', systemTheme)
+            setTheme(theme)
+        } else {
+            setTheme(localStorageTheme)
+            document.documentElement.setAttribute(
+                "data-theme",
+                localStorageTheme);
+        }
+    }, [theme]);
+
     return (
         <>
             <header>
@@ -21,7 +46,7 @@ function App() {
                 <AboutMe />
                 <Projects />
                 <Technology />
-                <ContactMe/>
+                <ContactMe />
             </main>
 
         </>

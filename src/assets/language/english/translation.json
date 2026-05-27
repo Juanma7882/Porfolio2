@@ -39,6 +39,26 @@
         "blog": {
             "title": "Blog API",
             "description": "Backend for a note-taking application, developed with .NET Core and SQL Server. Data management is handled through Entity Framework Core (EF Core), enabling smooth and secure interaction with domain entities."
+        },
+        "restaurant": {
+            "title": "Restaurant",
+            "description": "Mobile application for restaurant order management, developed with Ionic and Angular. The system streamlines the full order workflow, from order placement to kitchen preparation and delivery, improving operational efficiency and team coordination."
+        },
+        "self-service-for-hotel": {
+            "title": "self service for hotel",
+            "description": "Hotel self-service application designed to simplify room selection and booking through kiosk-based interaction, reducing wait times and enhancing guest autonomy."
+        },
+        "E-commerce": {
+            "title": "E-commerce",
+            "description": ""
+        },
+        "hackathon": {
+            "title": "Hackathon",
+            "description": "AI-powered technical interview simulation platform developed with React, Node.js, and PostgreSQL. The system evaluates open-ended responses using transformer models, providing semantic analysis, scoring, and personalized feedback for software interview preparation."
+        },
+        "PowerType": {
+            "title": "PowerType",
+            "description": "Contribuí a una herramienta de autocompletado de PowerShell de código abierto ampliando los diccionarios de comandos y mejorando la compatibilidad con comandos de la CLI, lo que mejoró la experiencia del desarrollador para la productividad en la terminal."
         }
     },
     "technologies": {

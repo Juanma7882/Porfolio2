@@ -1,9 +1,113 @@
-import { technologyIcons } from './icons'; 
+import { technologyIcons } from './icons';
 import type { Proyecto } from '../types';
 
-export const proyectos:Proyecto[] = [
+export const proyectos: Proyecto[] = [
   {
-    titulo: "projects.weatherApp.title", 
+    titulo: "projects.restaurant.title",
+    descripcion: "projects.restaurant.description",
+    imagenes: [
+      "/img/projects/restaurant/restaurante.webp",
+      "/img/projects/restaurant/restaurante2.webp",
+      "/img/projects/restaurant/restaurante3.webp",
+      "/img/projects/restaurant/restaurante4.webp",
+      "/img/projects/restaurant/restaurante5.webp"
+    ],
+    tecnologias: [
+      {
+        nombre: "Angular",
+        icono: technologyIcons[15].icono
+      },
+      {
+        nombre: "supabase",
+        icono: technologyIcons[2].icono
+      }
+    ],
+    github: "https://github.com/Juanma7882/",
+    pagina: "https://clima-cyan.vercel.app/"
+  },
+  {
+    titulo: "projects.self-service-for-hotel.title",
+    descripcion: "projects.self-service-for-hotel.description",
+    imagenes: [
+      "/img/projects/hotel/Macbook-Air-localhost.webp",
+      "/img/projects/hotel/Macbook-Air-localhost (1).webp",
+      "/img/projects/hotel/Macbook-Air-localhost (2).webp",
+      "/img/projects/hotel/Macbook-Air-localhost (3).webp",
+      "/img/projects/hotel/Macbook-Air-localhost (4).webp",
+      "/img/projects/hotel/Macbook-Air-localhost (5).webp",
+      "/img/projects/hotel/Macbook-Air-localhost (6).webp",
+    ],
+    tecnologias: [
+      {
+        nombre: "node.js",
+        icono: technologyIcons[6].icono
+      },
+      {
+        nombre: "JavaScript",
+        icono: technologyIcons[3].icono
+      },
+      {
+        nombre: "EJS",
+        icono: technologyIcons[3].icono
+      }
+    ],
+    github: "https://github.com/Juanma7882/clima",
+    pagina: "https://clima-cyan.vercel.app/"
+  },
+  {
+    titulo: "projects.hackathon.title",
+    descripcion: "projects.hackathon.description",
+    imagenes: [
+      "/img/projects/hackaton/hackaton.webp",
+      "/img/projects/hackaton/hackaton2.webp",
+      "/img/projects/hackaton/hackaton3.webp",
+    ],
+    tecnologias: [
+      {
+        nombre: "React",
+        icono: technologyIcons[5].icono
+      },
+      {
+        nombre: "node.js",
+        icono: technologyIcons[6].icono
+      },
+      {
+        nombre: "docker",
+        icono: technologyIcons[16].icono
+
+      },
+    ],
+    github: "https://github.com/Juanma7882/clima",
+    pagina: "https://clima-cyan.vercel.app/"
+  },
+  {
+    titulo: "projects.PowerType.title",
+    descripcion: "projects.PowerType.description",
+    imagenes: [
+      "/img/projects/consola/consola.webp",
+      "/img/projects/consola/consola1.webp",
+      "/img/projects/consola/consola2.webp",
+    ],
+    tecnologias: [
+      {
+        nombre: "React",
+        icono: technologyIcons[5].icono
+      },
+      {
+        nombre: "node.js",
+        icono: technologyIcons[6].icono
+      },
+      {
+        nombre: "docker",
+        icono: technologyIcons[16].icono
+
+      },
+    ],
+    github: "https://github.com/Juanma7882/clima",
+    pagina: "https://clima-cyan.vercel.app/"
+  },
+  {
+    titulo: "projects.weatherApp.title",
     descripcion: "projects.weatherApp.description",
     imagenes: [
       "/img/projects/weather/notebookclima1.webp",
@@ -22,14 +126,14 @@ export const proyectos:Proyecto[] = [
       {
         nombre: "CSS3",
         icono: technologyIcons[2].icono
-      }, 
+      },
       {
         nombre: "JavaScript",
         icono: technologyIcons[3].icono
 
       },
       {
-          nombre: "Vite",
+        nombre: "Vite",
         icono: technologyIcons[0].icono
       }
     ],
