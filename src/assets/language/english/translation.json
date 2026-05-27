@@ -58,7 +58,7 @@
         },
         "PowerType": {
             "title": "PowerType",
-            "description": "Contribuí a una herramienta de autocompletado de PowerShell de código abierto ampliando los diccionarios de comandos y mejorando la compatibilidad con comandos de la CLI, lo que mejoró la experiencia del desarrollador para la productividad en la terminal."
+            "description": "Contributed to an open-source PowerShell autocomplete tool by extending command dictionaries and improving CLI command support, enhancing the developer experience for terminal productivity"
         }
     },
     "technologies": {

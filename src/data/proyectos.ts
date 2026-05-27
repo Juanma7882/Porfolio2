@@ -90,17 +90,8 @@ export const proyectos: Proyecto[] = [
     ],
     tecnologias: [
       {
-        nombre: "React",
-        icono: technologyIcons[5].icono
-      },
-      {
-        nombre: "node.js",
-        icono: technologyIcons[6].icono
-      },
-      {
-        nombre: "docker",
-        icono: technologyIcons[16].icono
-
+        nombre: "git",
+        icono: technologyIcons[11].icono
       },
     ],
     github: "https://github.com/Juanma7882/clima",
