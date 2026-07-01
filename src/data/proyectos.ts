@@ -18,7 +18,7 @@ export const proyectos: Proyecto[] = [
     ],
     tecnologias: [
       { nombre: "Angular", icono: icon["Angular"] },
-      { nombre: "supabase", icono: icon["Supabase"] },
+      { nombre: "Supabase", icono: icon["Supabase"] },
     ],
     github: "https://github.com/Juanma7882/",
     pagina: "https://clima-cyan.vercel.app/",
@@ -36,7 +36,7 @@ export const proyectos: Proyecto[] = [
       "/img/projects/hotel/Macbook-Air-localhost (6).webp",
     ],
     tecnologias: [
-      { nombre: "node.js", icono: icon["Node.js"] },
+      { nombre: "Node.js", icono: icon["Node.js"] },
       { nombre: "JavaScript", icono: icon["JavaScript"] },
       { nombre: "EJS", icono: icon["JavaScript"] },
     ],
@@ -53,8 +53,8 @@ export const proyectos: Proyecto[] = [
     ],
     tecnologias: [
       { nombre: "React", icono: icon["React"] },
-      { nombre: "node.js", icono: icon["Node.js"] },
-      { nombre: "docker", icono: icon["Docker"] },
+      { nombre: "Node.js", icono: icon["Node.js"] },
+      { nombre: "Docker", icono: icon["Docker"] },
     ],
     github: "https://github.com/Juanma7882/clima",
     pagina: "https://clima-cyan.vercel.app/",
@@ -67,7 +67,7 @@ export const proyectos: Proyecto[] = [
       "/img/projects/consola/consola1.webp",
       "/img/projects/consola/consola2.webp",
     ],
-    tecnologias: [{ nombre: "git", icono: icon["Git"] }],
+    tecnologias: [{ nombre: "Git", icono: icon["Git"] }],
     github: "https://github.com/Juanma7882/clima",
     pagina: "https://clima-cyan.vercel.app/",
   },
@@ -84,7 +84,7 @@ export const proyectos: Proyecto[] = [
       "/img/projects/weather/celularclima3.webp",
     ],
     tecnologias: [
-      { nombre: "HTML5", icono: icon["HTML5"] },
+      { nombre: "HTML", icono: icon["HTML"] },
       { nombre: "CSS3", icono: icon["CSS3"] },
       { nombre: "JavaScript", icono: icon["JavaScript"] },
       { nombre: "Vite", icono: icon["Vite"] },
@@ -133,7 +133,7 @@ export const proyectos: Proyecto[] = [
     ],
     tecnologias: [
       { nombre: "C#", icono: icon["C#"] },
-      { nombre: ".NET Core", icono: icon[".NET"] },
+      { nombre: ".NET", icono: icon[".NET"] },
       { nombre: "SQL Server", icono: icon["SQL Server"] },
     ],
     github: "https://github.com/Juanma7882/Blog",

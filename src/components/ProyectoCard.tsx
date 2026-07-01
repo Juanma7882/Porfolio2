@@ -80,15 +80,26 @@ const ProyectoCard = ({ proyecto, index, inView }: { proyecto: Proyecto; index: 
 
                     <p>{t(proyecto.descripcion)}</p>
 
-                    <div className="w-full flex justify-center items-center">
+                    <div className="w-full flex gap-2">
                         <a
                             href={proyecto.github}
-                            className="shimmer-btn w-full py-3 px-6 rounded-xl border border-gray-500/40 dark:text-white font-semibold text-center active:scale-95 transition-all"
+                            className="shimmer-btn flex-1 py-3 px-6 rounded-xl border border-gray-500/40 dark:text-white font-semibold text-center active:scale-95 transition-all"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             GitHub
                         </a>
+                        {proyecto.pagina && (
+                            <a
+                                href={proyecto.pagina}
+                                className="flex-1 py-3 px-6 rounded-xl font-semibold text-center active:scale-95 transition-all text-white"
+                                style={{ background: `linear-gradient(135deg, ${glowColor}cc, ${glowColor}88)` }}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Live Demo
+                            </a>
+                        )}
                     </div>
                 </div>
             </div>

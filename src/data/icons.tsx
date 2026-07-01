@@ -65,7 +65,7 @@ export const technologyIcons: Tecnologia[] = [
         <polygon fill="#fff" points="14,22 14,25.034 18.972,25.034 18.972,38.972 21.965,38.972 22.018,25.034 27,25.034 27,22" />
       </svg>
     ),
-    colors: ['#ffffff', '#16528c'],
+    colors: ['#16528c', '#ffffff'],
   },
   {
     nombre: "React",
@@ -104,7 +104,7 @@ export const technologyIcons: Tecnologia[] = [
         <path fill="#81c784" d="M24,10c0,0-6,5-6,13c0,5.2,3.3,8.5,5,10l1-3V10z"></path>
       </svg>
     ),
-    colors: ['#5d4037', '#4caf50', '#dcedc8', '#4caf50', '#81c784']
+    colors: ['#3ECF8E', '#4caf50', '#dcedc8', '#4caf50', '#81c784']
   },
   {
     nombre: "C#",
@@ -251,19 +251,22 @@ export const technologyIcons: Tecnologia[] = [
     nombre: "Linux",
     icono: (
       <img src="/icons/linux.svg" alt="Icon Linux" className="w-full h-full object-contain" />
-    )
+    ),
+    colors: ['#FFD133', '#f5a623', '#ffc200', '#e6b800'],
   },
   {
     nombre: "Postman",
     icono: (
       <img src="/icons/postman.svg" alt="Icon Postman" className="w-full h-full object-contain" />
-    )
+    ),
+    colors: ['#FF6C37', '#e65c2a', '#ff8c5a', '#ffa07a'],
   },
   {
     nombre: "SQL",
     icono: (
-      <img src="/icons/SQL.svg" alt="Icon SQL" className="w-full h-full object-contain " />
-    )
+      <img src="/icons/SQL.svg" alt="Icon SQL" className="w-full h-full object-contain" />
+    ),
+    colors: ['#336791', '#4479a1', '#5dade2', '#2874a6'],
   },
   {
     nombre: "Tailwind",
@@ -279,7 +282,7 @@ export const technologyIcons: Tecnologia[] = [
     nombre: "Supabase",
     icono: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="40" height="40" className="w-full h-full">
-        <path fill="#3ECF8E" d="M43.9,22.5L27.5,43.3c-1.2,1.4-3.5,0.6-3.5-1.2V30H6.6c-2.1,0-3.3-2.5-2-4.1L20.7,5.1c1.1-1.5,3.4-0.7,3.4,1.2v12.1h17.7C44.1,18.4,45.3,20.8,43.9,22.5z"/>
+        <path fill="#3ECF8E" d="M43.9,22.5L27.5,43.3c-1.2,1.4-3.5,0.6-3.5-1.2V30H6.6c-2.1,0-3.3-2.5-2-4.1L20.7,5.1c1.1-1.5,3.4-0.7,3.4,1.2v12.1h17.7C44.1,18.4,45.3,20.8,43.9,22.5z" />
       </svg>
     ),
     colors: ['#3ECF8E', '#1a9768', '#71c674', '#2dd4a0', '#0ea572'],
