@@ -1,17 +1,14 @@
 import '../src/styles/index.css'
-import { useEffect, useState } from 'react';
-
-import AboutMe from './pages/main/AboutMe.tsx';
-import Home from './pages/main/Home.tsx';
+import { useEffect, useState, lazy, Suspense } from 'react';
 import Navbar from './Navbar.tsx';
-// import Projects from './Projects.tsx';
 import './assets/language/changeLanguage.ts'
-import Projects from './pages/main/Projects.tsx';
-import Technology from './pages/main/Technology.tsx';
-import ContactMe from './pages/main/ContactMe.tsx';
+import { Oneko } from './components/Oneko.tsx'
 
-
-
+const Home = lazy(() => import("./pages/main/Home.tsx"))
+const AboutMe = lazy(() => import("./pages/main/AboutMe.tsx"))
+const Projects = lazy(() => import("./pages/main/Projects.tsx"))
+const Technology = lazy(() => import("./pages/main/Technology.tsx"))
+const ContactMe = lazy(() => import("./pages/main/ContactMe.tsx"))
 
 function App() {
     const [theme, setTheme] = useState('light');
@@ -26,7 +23,7 @@ function App() {
                 : "light";
 
             localStorage.setItem('theme', systemTheme)
-            setTheme(theme)
+            setTheme(systemTheme)
         } else {
             setTheme(localStorageTheme)
             document.documentElement.setAttribute(
@@ -37,18 +34,19 @@ function App() {
 
     return (
         <>
+            <Oneko />
             <header>
                 <Navbar />
             </header>
             <main>
-                {/* <main className='relative'> */}
-                <Home />
-                <AboutMe />
-                <Projects />
-                <Technology />
-                <ContactMe />
+                <Suspense fallback={<div className='min-h-screen' />}>
+                    <Home />
+                    <AboutMe />
+                    <Projects />
+                    <Technology />
+                    <ContactMe />
+                </Suspense>
             </main>
-
         </>
     );
 }

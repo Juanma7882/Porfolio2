@@ -1,60 +1,54 @@
+import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { technologyIcons } from "../../data/icons";
 
-type Tecnologia = {
-    nombre: string;
-    icono: React.ReactNode;
-    colors?: string[];
-};
-
-type Categoria = {
-    titulo: string;
-    tecnologias: Tecnologia[];
-};
-
-const tecnologiasPorCategoria: Categoria[] = [
-    {
-        titulo: "technologies.fronted",
-        tecnologias: [
-            { nombre: "HTML", icono: technologyIcons.find(t => t.nombre === "HTML")?.icono! },
-            { nombre: "CSS", icono: technologyIcons.find(t => t.nombre === "CSS3")?.icono! },
-            { nombre: "JavaScript", icono: technologyIcons.find(t => t.nombre === "JavaScript")?.icono! },
-            { nombre: "React", icono: technologyIcons.find(t => t.nombre === "React")?.icono! },
-        ]
-    },
-    {
-        titulo: "technologies.backend",
-        tecnologias: [
-            { nombre: "C#", icono: technologyIcons.find(t => t.nombre === "C#")?.icono! },
-            { nombre: ".NET", icono: technologyIcons.find(t => t.nombre === ".NET")?.icono! },
-            { nombre: "Node", icono: technologyIcons.find(t => t.nombre === "Node.js")?.icono! },
-            { nombre: "Python", icono: technologyIcons.find(t => t.nombre === "Python")?.icono! },
-        ]
-    },
-    {
-        titulo: "technologies.tools",
-        tecnologias: [
-            { nombre: "Git", icono: technologyIcons.find(t => t.nombre === "Git")?.icono! },
-            { nombre: "GitHub", icono: technologyIcons.find(t => t.nombre === "GitHub")?.icono! },
-            { nombre: "SQL", icono: technologyIcons.find(t => t.nombre === "SQL")?.icono! },
-            { nombre: "NoSQL", icono: technologyIcons.find(t => t.nombre === "MongoDB")?.icono! },
-            { nombre: "Postman", icono: technologyIcons.find(t => t.nombre === "Postman")?.icono! },
-        ]
-    },
-    {
-        titulo: "technologies.others",
-        tecnologias: [
-            { nombre: "Docker", icono: technologyIcons.find(t => t.nombre === "Docker")?.icono! },
-            { nombre: "TypeScript", icono: technologyIcons.find(t => t.nombre === "TypeScript")?.icono! },
-            { nombre: "Linux", icono: technologyIcons.find(t => t.nombre === "Linux")?.icono! },
-        ]
-    }
-];
-
-
-
 function Technology() {
     const { t } = useTranslation();
+
+    const tecnologiasPorCategoria = useMemo(() => {
+        const icon = Object.fromEntries(technologyIcons.map(t => [t.nombre, t.icono]));
+        return [
+            {
+                titulo: "technologies.fronted",
+                tecnologias: [
+                    { nombre: "HTML5", icono: icon["HTML5"] },
+                    { nombre: "CSS", icono: icon["CSS3"] },
+                    { nombre: "JavaScript", icono: icon["JavaScript"] },
+                    { nombre: "React", icono: icon["React"] },
+                    { nombre: "Angular", icono: icon["Angular"] },
+                ]
+            },
+            {
+                titulo: "technologies.backend",
+                tecnologias: [
+                    { nombre: "C#", icono: icon["C#"] },
+                    { nombre: ".NET", icono: icon[".NET"] },
+                    { nombre: "Node", icono: icon["Node.js"] },
+                    { nombre: "Python", icono: icon["Python"] },
+                    { nombre: "NestJS", icono: icon["NestJS"] },
+                ]
+            },
+            {
+                titulo: "technologies.tools",
+                tecnologias: [
+                    { nombre: "Git", icono: icon["Git"] },
+                    { nombre: "GitHub", icono: icon["GitHub"] },
+                    { nombre: "SQL", icono: icon["SQL"] },
+                    { nombre: "NoSQL", icono: icon["MongoDB"] },
+                    { nombre: "Postman", icono: icon["Postman"] },
+                ]
+            },
+            {
+                titulo: "technologies.others",
+                tecnologias: [
+                    { nombre: "Docker", icono: icon["Docker"] },
+                    { nombre: "TypeScript", icono: icon["TypeScript"] },
+                    { nombre: "Linux", icono: icon["Linux"] },
+                ]
+            }
+        ];
+    }, []);
+
     return (
         <>
             <section className="dark:text-white dark:bg-black min-h-screen flex items-center justify-center flex-col px-4" id="technologies">
@@ -75,7 +69,8 @@ function Technology() {
                     ))}
                 </div>
             </section>
-
         </>
-    )
-} export default Technology;
+    );
+}
+
+export default Technology;

@@ -4,6 +4,8 @@ import type { JSX } from "react";
 export interface Tecnologia {
   nombre: string;
   icono: JSX.Element;
+  colors?: string[];
+  svg?: string;
 }
 
 export interface Proyecto {

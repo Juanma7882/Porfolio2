@@ -1,5 +1,9 @@
-import { technologyIcons } from './icons';
-import type { Proyecto } from '../types';
+import { technologyIcons } from "./icons";
+import type { Proyecto } from "../types";
+
+const icon = Object.fromEntries(
+  technologyIcons.map((t) => [t.nombre, t.icono]),
+);
 
 export const proyectos: Proyecto[] = [
   {
@@ -10,20 +14,14 @@ export const proyectos: Proyecto[] = [
       "/img/projects/restaurant/restaurante2.webp",
       "/img/projects/restaurant/restaurante3.webp",
       "/img/projects/restaurant/restaurante4.webp",
-      "/img/projects/restaurant/restaurante5.webp"
+      "/img/projects/restaurant/restaurante5.webp",
     ],
     tecnologias: [
-      {
-        nombre: "Angular",
-        icono: technologyIcons[15].icono
-      },
-      {
-        nombre: "supabase",
-        icono: technologyIcons[2].icono
-      }
+      { nombre: "Angular", icono: icon["Angular"] },
+      { nombre: "supabase", icono: icon["Supabase"] },
     ],
     github: "https://github.com/Juanma7882/",
-    pagina: "https://clima-cyan.vercel.app/"
+    pagina: "https://clima-cyan.vercel.app/",
   },
   {
     titulo: "projects.self-service-for-hotel.title",
@@ -38,21 +36,12 @@ export const proyectos: Proyecto[] = [
       "/img/projects/hotel/Macbook-Air-localhost (6).webp",
     ],
     tecnologias: [
-      {
-        nombre: "node.js",
-        icono: technologyIcons[6].icono
-      },
-      {
-        nombre: "JavaScript",
-        icono: technologyIcons[3].icono
-      },
-      {
-        nombre: "EJS",
-        icono: technologyIcons[3].icono
-      }
+      { nombre: "node.js", icono: icon["Node.js"] },
+      { nombre: "JavaScript", icono: icon["JavaScript"] },
+      { nombre: "EJS", icono: icon["JavaScript"] },
     ],
     github: "https://github.com/Juanma7882/clima",
-    pagina: "https://clima-cyan.vercel.app/"
+    pagina: "https://clima-cyan.vercel.app/",
   },
   {
     titulo: "projects.hackathon.title",
@@ -63,22 +52,12 @@ export const proyectos: Proyecto[] = [
       "/img/projects/hackaton/hackaton3.webp",
     ],
     tecnologias: [
-      {
-        nombre: "React",
-        icono: technologyIcons[5].icono
-      },
-      {
-        nombre: "node.js",
-        icono: technologyIcons[6].icono
-      },
-      {
-        nombre: "docker",
-        icono: technologyIcons[16].icono
-
-      },
+      { nombre: "React", icono: icon["React"] },
+      { nombre: "node.js", icono: icon["Node.js"] },
+      { nombre: "docker", icono: icon["Docker"] },
     ],
     github: "https://github.com/Juanma7882/clima",
-    pagina: "https://clima-cyan.vercel.app/"
+    pagina: "https://clima-cyan.vercel.app/",
   },
   {
     titulo: "projects.PowerType.title",
@@ -88,14 +67,9 @@ export const proyectos: Proyecto[] = [
       "/img/projects/consola/consola1.webp",
       "/img/projects/consola/consola2.webp",
     ],
-    tecnologias: [
-      {
-        nombre: "git",
-        icono: technologyIcons[11].icono
-      },
-    ],
+    tecnologias: [{ nombre: "git", icono: icon["Git"] }],
     github: "https://github.com/Juanma7882/clima",
-    pagina: "https://clima-cyan.vercel.app/"
+    pagina: "https://clima-cyan.vercel.app/",
   },
   {
     titulo: "projects.weatherApp.title",
@@ -107,29 +81,16 @@ export const proyectos: Proyecto[] = [
       "/img/projects/weather/tableclima2.webp",
       "/img/projects/weather/celularclima1.webp",
       "/img/projects/weather/celularclima2.webp",
-      "/img/projects/weather/celularclima3.webp"
+      "/img/projects/weather/celularclima3.webp",
     ],
     tecnologias: [
-      {
-        nombre: "HTML5",
-        icono: technologyIcons[1].icono
-      },
-      {
-        nombre: "CSS3",
-        icono: technologyIcons[2].icono
-      },
-      {
-        nombre: "JavaScript",
-        icono: technologyIcons[3].icono
-
-      },
-      {
-        nombre: "Vite",
-        icono: technologyIcons[0].icono
-      }
+      { nombre: "HTML5", icono: icon["HTML5"] },
+      { nombre: "CSS3", icono: icon["CSS3"] },
+      { nombre: "JavaScript", icono: icon["JavaScript"] },
+      { nombre: "Vite", icono: icon["Vite"] },
     ],
     github: "https://github.com/Juanma7882/clima",
-    pagina: "https://clima-cyan.vercel.app/"
+    pagina: "https://clima-cyan.vercel.app/",
   },
   {
     titulo: "projects.dealershipManager.title",
@@ -138,21 +99,14 @@ export const proyectos: Proyecto[] = [
       "/img/projects/dealership/imgInicio.webp",
       "/img/projects/dealership/imgMenu.webp",
       "/img/projects/dealership/vehiculos.webp",
-      "/img/projects/dealership/Agregar Vechiculo.webp"
+      "/img/projects/dealership/Agregar Vechiculo.webp",
     ],
     tecnologias: [
-      {
-        nombre: "C#",
-        icono: technologyIcons[8].icono
-
-      },
-      {
-        nombre: "SQL Server",
-        icono: technologyIcons[10].icono
-      }
+      { nombre: "C#", icono: icon["C#"] },
+      { nombre: "SQL Server", icono: icon["SQL Server"] },
     ],
     github: "https://github.com/Juanma7882/Concecionaria-wf",
-    pagina: ""
+    pagina: "",
   },
   {
     titulo: "projects.pygame.title",
@@ -164,41 +118,25 @@ export const proyectos: Proyecto[] = [
       "/img/projects/pygame/level3game.webp",
       "/img/projects/pygame/gamepause.webp",
       "/img/projects/pygame/gameTop5.webp",
-      "/img/projects/pygame/loseGame.webp"
+      "/img/projects/pygame/loseGame.webp",
     ],
-    tecnologias: [
-      {
-        nombre: "Python",
-        icono: technologyIcons[13].icono
-      }
-    ],
+    tecnologias: [{ nombre: "Python", icono: icon["Python"] }],
     github: "https://github.com/Juanma7882/MiJuego",
-    pagina: ""
+    pagina: "",
   },
   {
     titulo: "projects.blog.title",
     descripcion: "projects.blog.description",
     imagenes: [
       "/img/projects/blog/Enpoints.webp",
-      "/img/projects/blog/Enpoints1.webp"
+      "/img/projects/blog/Enpoints1.webp",
     ],
     tecnologias: [
-      {
-        nombre: "C#",
-        icono: technologyIcons[8].icono
-
-      },
-      {
-        nombre: ".NET Core",
-        icono: technologyIcons[9].icono
-
-      },
-      {
-        nombre: "SQL Server",
-        icono: technologyIcons[10].icono
-      }
+      { nombre: "C#", icono: icon["C#"] },
+      { nombre: ".NET Core", icono: icon[".NET"] },
+      { nombre: "SQL Server", icono: icon["SQL Server"] },
     ],
     github: "https://github.com/Juanma7882/Blog",
-    pagina: ""
+    pagina: "",
   },
 ];

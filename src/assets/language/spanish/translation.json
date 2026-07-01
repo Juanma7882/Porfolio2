@@ -19,9 +19,9 @@
     },
     "about": {
         "title": "Sobre mi",
-        "intro": "Soy Juan Manuel Fernández, soy un desarrollador full stack de Buenos Aires, Argentina. Actualmente estoy cursando el último año de la Tecnicatura en Programación en la Universidad Tecnológica Nacional.",
-        "skillsIntro": " Estoy en busca de nuevas oportunidades que me permitan seguir creciendo profesionalmente. Mis lenguajes favoritos son Python, C# y JavaScript.",
-        "experience": "Actualmente tengo un nivel B2 en inglés y estoy en constante mejora. Trabajo como desarrollador independiente, relevando requerimientos y diseñando soluciones con sistemas que sean intuitivos y fáciles de usar para el usuario."
+        "intro": "Soy <0>Juan Manuel Fernández</0>, <1>desarrollador full stack</1> de Buenos Aires, Argentina.",
+        "skillsIntro": " Estoy en busca de nuevas oportunidades que me permitan seguir creciendo profesionalmente. Mis lenguajes favoritos son <0>Python</0>, <1>C#</1> y <2>JavaScript</2>.",
+        "experience": "Recientemente me <0>recibí</0> de la Tecnicatura en Programación en la Universidad Tecnológica Nacional. A lo largo de la carrera desarrollé proyectos en distintas áreas — aplicaciones móviles, sistemas web, APIs REST y una plataforma de entrevistas con IA — adquiriendo experiencia práctica en todo el stack. También tengo un <1>nivel B1 en inglés</1> y estoy en constante mejora."
     },
     "projects": {
         "weatherApp": {
