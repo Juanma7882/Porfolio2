@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import type { Swiper as SwiperType } from 'swiper';
 import type { Proyecto } from '../types';
 import "../../node_modules/swiper/swiper.css";
 import "../../node_modules/swiper/modules/navigation.css";
@@ -11,21 +12,40 @@ import { technologyIcons } from '../data/icons';
 const ProyectoCard = ({ proyecto, index, inView }: { proyecto: Proyecto; index: number; inView: boolean }) => {
     const { t } = useTranslation();
     const [hovered, setHovered] = useState(false);
+    const swiperRef = useRef<SwiperType | null>(null);
+    const cardRef = useRef<HTMLDivElement>(null);
 
     const glowColor = technologyIcons.find(
         t => t.nombre.toLowerCase() === proyecto.tecnologias[0]?.nombre.toLowerCase()
     )?.colors?.[0] ?? '#6b7280';
 
-    // stagger: rows separated by 120ms, columns by 60ms
     const delay = Math.floor(index / 2) * 120 + (index % 2) * 60;
 
+    useEffect(() => {
+        const el = cardRef.current;
+        if (!el) return;
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                const swiper = swiperRef.current;
+                if (!swiper?.autoplay) return;
+                if (entry.isIntersecting) {
+                    swiper.autoplay.start();
+                } else {
+                    swiper.autoplay.stop();
+                }
+            },
+            { threshold: 0.1 }
+        );
+        observer.observe(el);
+        return () => observer.disconnect();
+    }, []);
+
     return (
-        // outer div: handles scroll reveal (opacity + translateY)
         <div
+            ref={cardRef}
             className={`m-3 transition-all duration-700 ease-out ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
             style={{ transitionDelay: `${delay}ms` }}
         >
-            {/* inner div: handles hover (lift + glow border) */}
             <div
                 className="h-full bg-gray-200 dark:bg-[#09090c] flex flex-col align-center text-center border border-solid rounded-2xl transition-all duration-300"
                 style={{
@@ -48,10 +68,17 @@ const ProyectoCard = ({ proyecto, index, inView }: { proyecto: Proyecto; index: 
                             navigation={true}
                             modules={[Autoplay, Pagination, Navigation]}
                             className="mySwiper"
+                            onSwiper={(s) => { swiperRef.current = s; }}
                         >
                             {proyecto.imagenes.map((img, i) => (
                                 <SwiperSlide key={i}>
-                                    <img src={img} alt={`slide-${i}`} className="swiper-slide" />
+                                    <img
+                                        src={img}
+                                        alt={`slide-${i}`}
+                                        className="swiper-slide"
+                                        loading="lazy"
+                                        decoding="async"
+                                    />
                                 </SwiperSlide>
                             ))}
                         </Swiper>

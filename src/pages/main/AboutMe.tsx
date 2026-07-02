@@ -60,10 +60,12 @@ function AboutMe() {
             style={{ transitionDelay: '150ms' }}
           >
             <img
-              className="h-auto w-auto object-contain rounded-xl shadow-lg md:h-auto lg:h-full transition-transform duration-300 "
+              className="h-auto w-auto object-contain rounded-xl shadow-lg md:h-auto lg:h-full transition-transform duration-300"
               src="/img/FernandezJuan optimization.webp"
               alt="Img Fernandez Juan"
               title="Fernandez Juan"
+              fetchPriority="high"
+              decoding="async"
             />
           </div>
 

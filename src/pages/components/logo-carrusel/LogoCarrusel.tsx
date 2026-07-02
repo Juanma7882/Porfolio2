@@ -1,34 +1,16 @@
+import { useEffect, useRef, useState } from 'react';
 import { LOGOS } from './logos';
 import { LogoCard } from './LogoCard';
 import './logoCarrusel.css';
 
 interface LogoCarouselProps {
-    /**
-     * Velocidad de la animación en segundos. Default: 20.
-     */
     duration?: number;
-    /**
-     * Gap entre logos en px. Default: 48.
-     */
     gap?: number;
-    /**
-     * Tamaño de cada card en px. Default: 80.
-     */
     cardSize?: number;
-    /**
-     * Pausa la animación al hacer hover sobre el carrusel. Default: true.
-     */
     pauseOnHover?: boolean;
     left?: boolean;
 }
 
-/**
- * Carrusel infinito de logos con efecto de partículas canvas en hover.
- *
- * Uso:
- *   <LogoCarousel />
- *   <LogoCarousel duration={15} gap={64} cardSize={96} />
- */
 export function LogoCarousel({
     duration = 20,
     gap = 48,
@@ -36,40 +18,37 @@ export function LogoCarousel({
     pauseOnHover = true,
     left = false,
 }: LogoCarouselProps) {
-    // Duplicamos para el loop infinito sin saltos
+    const wrapRef = useRef<HTMLDivElement>(null);
+    const [paused, setPaused] = useState(false);
+
+    useEffect(() => {
+        const el = wrapRef.current;
+        if (!el) return;
+        const observer = new IntersectionObserver(
+            ([entry]) => setPaused(!entry.isIntersecting),
+            { threshold: 0 }
+        );
+        observer.observe(el);
+        return () => observer.disconnect();
+    }, []);
+
     const allLogos = [...LOGOS, ...LOGOS];
+    const trackClass = [
+        'logo-carousel-track',
+        left ? '' : 'logo-carousel-track-right',
+        pauseOnHover ? 'pause-on-hover' : '',
+        paused ? 'paused' : '',
+    ].filter(Boolean).join(' ');
+
+    const trackStyle = { gap: `${gap}px`, '--duration': `${duration}s` } as React.CSSProperties;
 
     return (
-        <div className="logo-carousel-wrap bg-white dark:bg-black">
-            {left ? (
-                <div
-                    className={`logo-carousel-track  ${pauseOnHover ? 'pause-on-hover' : ''}`}
-                    style={
-                        {
-                            gap: `${gap}px`,
-                            '--duration': `${duration}s`,
-                        } as React.CSSProperties
-                    }
-                >
-                    {allLogos.map((logo, i) => (
-                        <LogoCard key={`${logo.name}-${i}`} logo={logo} size={cardSize} />
-                    ))}
-                </div>
-            ) :
-                <div
-                    className={`logo-carousel-track logo-carousel-track-right  ${pauseOnHover ? 'pause-on-hover' : ''}`}
-                    style={
-                        {
-                            gap: `${gap}px`,
-                            '--duration': `${duration}s`,
-                        } as React.CSSProperties
-                    }
-                >
-                    {allLogos.map((logo, i) => (
-                        <LogoCard key={`${logo.name}-${i}`} logo={logo} size={cardSize} />
-                    ))}
-                </div>
-            }
+        <div ref={wrapRef} className="logo-carousel-wrap bg-white dark:bg-black">
+            <div className={trackClass} style={trackStyle}>
+                {allLogos.map((logo, i) => (
+                    <LogoCard key={`${logo.name}-${i}`} logo={logo} size={cardSize} />
+                ))}
+            </div>
         </div>
     );
 }

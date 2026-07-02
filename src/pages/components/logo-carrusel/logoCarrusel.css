@@ -19,7 +19,8 @@
   animation: carousel-scroll-right var(--duration, 20s) linear infinite;
 }
 
-.logo-carousel-track.pause-on-hover:hover {
+.logo-carousel-track.pause-on-hover:hover,
+.logo-carousel-track.paused {
   animation-play-state: paused;
 }
 

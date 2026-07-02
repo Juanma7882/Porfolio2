@@ -1,69 +1,38 @@
 import { useRef, useCallback, useEffect, useState } from 'react';
 
-
 function useDarkMode() {
     const [isDark, setIsDark] = useState(() => {
-        const savedTheme = localStorage.getItem("theme");
-
-        // Si ya existe en localStorage
-        if (savedTheme) {
-            return savedTheme === "dark";
-        }
-
-        // Si no existe, usar el tema del sistema
-        const systemDark = window.matchMedia(
-            "(prefers-color-scheme: dark)"
-        ).matches;
-
-        // Guardarlo automáticamente
-        localStorage.setItem(
-            "theme",
-            systemDark ? "dark" : "light"
-        );
-
-        return systemDark;
+        const saved = localStorage.getItem('theme');
+        if (saved) return saved === 'dark';
+        const system = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        localStorage.setItem('theme', system ? 'dark' : 'light');
+        return system;
     });
 
     useEffect(() => {
-        const observer = new MutationObserver((mutations) => {
-            mutations.forEach((mutation) => {
-                if (mutation.attributeName === 'class') {
-                    const isDarkNow = document.documentElement.classList.contains('dark');
-                    setIsDark(isDarkNow);
-                }
-            });
+        const observer = new MutationObserver(() => {
+            setIsDark(document.documentElement.classList.contains('dark'));
         });
+        observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
 
-        observer.observe(document.documentElement, { attributes: true });
-
-        // También escuchar cambios en prefers-color-scheme
-        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-        const handleChange = (e: MediaQueryListEvent) => {
-            // Solo si no hay clase dark explícita
+        const mq = window.matchMedia('(prefers-color-scheme: dark)');
+        const onChange = (e: MediaQueryListEvent) => {
             if (!document.documentElement.classList.contains('dark') &&
                 !document.documentElement.classList.contains('light')) {
                 setIsDark(e.matches);
             }
         };
-
-        mediaQuery.addEventListener('change', handleChange);
-
-        return () => {
-            observer.disconnect();
-            mediaQuery.removeEventListener('change', handleChange);
-        };
+        mq.addEventListener('change', onChange);
+        return () => { observer.disconnect(); mq.removeEventListener('change', onChange); };
     }, []);
 
     return isDark;
 }
 
-
 interface Particle {
-    x: number;
-    y: number;
+    x: number; y: number;
     size: number;
-    baseAlpha: number;
-    alpha: number;
+    baseAlpha: number; alpha: number;
     color: string;
     phase: number;
 }
@@ -73,56 +42,61 @@ const COLS = 27;
 const ROWS = 27;
 
 export function useParticleCanvas(colors: string[]) {
-    const canvasRef = useRef<HTMLCanvasElement>(null);
-    const rafRef = useRef<number>(0);
-    const particlesRef = useRef<Particle[]>([]);
-    const isHoveredRef = useRef(false);
+    const canvasRef       = useRef<HTMLCanvasElement>(null);
+    const rafRef          = useRef<number>(0);
+    const particlesRef    = useRef<Particle[]>([]);
+    const isHoveredRef    = useRef(false);
     const hoverProgressRef = useRef(0);
-    const isDarkMode = useDarkMode();
-    const isDarkModeRef = useRef(isDarkMode);
+    const isDarkMode      = useDarkMode();
+    const isDarkModeRef   = useRef(isDarkMode);
 
-    const init = useCallback(
-        (width: number, height: number) => {
-            const cellW = width / COLS;
-            const cellH = height / ROWS;
+    useEffect(() => { isDarkModeRef.current = isDarkMode; }, [isDarkMode]);
 
-            particlesRef.current = [];
-
-            for (let row = 0; row < ROWS; row++) {
-                for (let col = 0; col < COLS; col++) {
-                    particlesRef.current.push({
-                        // centro de cada celda → grilla perfecta
-                        x: cellW * col + cellW / 2,
-                        y: cellH * row + cellH / 2,
-                        size: 0.5 + Math.random() * 0.2,
-                        baseAlpha: 0.18 + Math.random() * 0.2,
-                        alpha: 0,
-                        color: colors[Math.floor(Math.random() * colors.length)],
-                        phase: Math.random() * Math.PI * 2, // pulso desfasado por punto
-                    });
-                }
+    const init = useCallback((width: number, height: number) => {
+        const cellW = width / COLS;
+        const cellH = height / ROWS;
+        particlesRef.current = [];
+        for (let row = 0; row < ROWS; row++) {
+            for (let col = 0; col < COLS; col++) {
+                particlesRef.current.push({
+                    x: cellW * col + cellW / 2,
+                    y: cellH * row + cellH / 2,
+                    size: 0.5 + Math.random() * 0.2,
+                    baseAlpha: 0.18 + Math.random() * 0.2,
+                    alpha: 0,
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    phase: Math.random() * Math.PI * 2,
+                });
             }
-        },
-        [colors]
-    );
+        }
+    }, [colors]);
 
-    useEffect(() => {
-        isDarkModeRef.current = isDarkMode;
-        console.log(isDarkMode)
-    }, [isDarkMode]);
+    // Dibuja el estado idle de forma estática (sin loop)
+    const drawIdle = useCallback((canvas: HTMLCanvasElement) => {
+        const ctx = canvas.getContext('2d');
+        if (!ctx) return;
+        ctx.fillStyle = isDarkModeRef.current ? '#0f1117' : '#ffffff';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        for (const p of particlesRef.current) {
+            ctx.globalAlpha = p.baseAlpha * 0.7;
+            ctx.fillStyle = IDLE_COLOR;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+            ctx.fill();
+        }
+        ctx.globalAlpha = 1;
+    }, []);
 
-    useEffect(() => {
+    // Arranca el rAF loop solo cuando es necesario (hover activo o fade-out en curso)
+    const startLoop = useCallback(() => {
+        if (rafRef.current) return;
         const canvas = canvasRef.current;
         if (!canvas) return;
-        init(canvas.width, canvas.height);
 
         const loop = (t: number) => {
             const ctx = canvas.getContext('2d');
             if (!ctx) return;
 
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            // const bgColor = isDarkMode ? '#0f1117' : '#ffffff';
             ctx.fillStyle = isDarkModeRef.current ? '#0f1117' : '#ffffff';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -136,24 +110,18 @@ export function useParticleCanvas(colors: string[]) {
 
             for (const p of particlesRef.current) {
                 const pulse = 0.5 + 0.5 * Math.sin(t * 0.0008 + p.phase);
-
-                const idleAlpha = p.baseAlpha * pulse;
+                const idleAlpha  = p.baseAlpha * pulse;
                 const hoverAlpha = 0.5 + 0.5 * pulse;
                 p.alpha = idleAlpha + (hoverAlpha - idleAlpha) * hp;
-
-                const idleSize = p.size;
-                const hoverSize = p.size * 1.6;
-                const currentSize = idleSize + (hoverSize - idleSize) * hp;
+                const currentSize = p.size + p.size * 0.6 * hp;
 
                 ctx.globalAlpha = p.alpha;
 
-                // interpolación de color: gris → color del logo
                 if (hp < 0.01) {
                     ctx.fillStyle = IDLE_COLOR;
                 } else if (hp > 0.99) {
                     ctx.fillStyle = p.color;
                 } else {
-                    // dos capas superpuestas para simular lerp de color
                     ctx.fillStyle = IDLE_COLOR;
                     ctx.beginPath();
                     ctx.arc(p.x, p.y, currentSize, 0, Math.PI * 2);
@@ -168,19 +136,43 @@ export function useParticleCanvas(colors: string[]) {
             }
 
             ctx.globalAlpha = 1;
-            rafRef.current = requestAnimationFrame(loop);
+
+            if (hp > 0 || isHoveredRef.current) {
+                rafRef.current = requestAnimationFrame(loop);
+            } else {
+                // Animación completada: volver al dibujo estático y detener el loop
+                rafRef.current = 0;
+                drawIdle(canvas);
+            }
         };
 
         rafRef.current = requestAnimationFrame(loop);
-        return () => cancelAnimationFrame(rafRef.current);
-    }, [init]);
+    }, [drawIdle]);
+
+    // Init + dibujo estático inicial. Sin loop.
+    useEffect(() => {
+        const canvas = canvasRef.current;
+        if (!canvas) return;
+        init(canvas.width, canvas.height);
+        drawIdle(canvas);
+        return () => { cancelAnimationFrame(rafRef.current); rafRef.current = 0; };
+    }, [init, drawIdle]);
+
+    // Redibujar idle cuando cambia el modo oscuro (solo si no hay loop activo)
+    useEffect(() => {
+        const canvas = canvasRef.current;
+        if (!canvas || rafRef.current) return;
+        drawIdle(canvas);
+    }, [isDarkMode, drawIdle]);
 
     const onMouseEnter = useCallback(() => {
         isHoveredRef.current = true;
-    }, []);
+        startLoop();
+    }, [startLoop]);
 
     const onMouseLeave = useCallback(() => {
         isHoveredRef.current = false;
+        // El loop se detiene solo cuando hoverProgress llega a 0
     }, []);
 
     return { canvasRef, onMouseEnter, onMouseLeave };

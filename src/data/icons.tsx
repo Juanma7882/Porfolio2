@@ -210,7 +210,7 @@ export const technologyIcons: Tecnologia[] = [
   {
     nombre: "Angular",
     icono: (
-      <img src="/icons/angular.svg" alt="Icon Angular" className="w-full h-full object-contain" />
+      <img src="/icons/angular.svg" alt="Icon Angular" className="w-full h-full object-contain" loading="lazy" decoding="async" />
     ),
     colors: ['#dd0031', '#c3002f', '#ff4d6d', '#a50025', '#ff8fa3'],
     svg: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 2L3 7l1.97 17.09L16 30l11.03-5.91L29 7 16 2z" fill="#dd0031"/><path d="M16 2v28l11.03-5.91L29 7 16 2z" fill="#c3002f"/><path d="M16 6.5L9 23h2.6l1.4-3.5h6l1.4 3.5H23L16 6.5zm0 4l2.2 5.5h-4.4L16 10.5z" fill="white"/></svg>`,
@@ -218,7 +218,7 @@ export const technologyIcons: Tecnologia[] = [
   {
     nombre: "Docker",
     icono: (
-      <img src="/icons/docker.svg" alt="Icon Docker" className="w-full h-full object-contain" />
+      <img src="/icons/docker.svg" alt="Icon Docker" className="w-full h-full object-contain" loading="lazy" decoding="async" />
     ),
     colors: ['#00E9FF', '#dd0031',],
     svg: `<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 48 48"><path fill="#03A9F4" d="M40,20c0.391-1.735-0.092-3.78-2.5-6c-3.914,3.543-2.795,7.227-1.5,9c0,0-0.166,1-4,1S2,24,2,24S0.167,40,18,40c15.593,0,19.973-12.003,20.828-15.076C39.182,24.972,39.579,25.003,40,25c2.147-0.017,4.93-1.171,6-5.484C43.162,18.533,41.339,18.978,40,20z"></path><path fill="#0288D1" d="M2.165,28C2.9,32.739,5.983,40,18,40c12.185,0,17.523-7.33,19.682-12H2.165z"></path><path fill="#81D4FA" d="M19.812,39.938C18.892,39.616,14.74,38.848,14,33c-4.209,1.863-7.938,1.375-9.579,1.008C6.583,37.237,10.591,40,18,40C18.623,40,19.224,39.976,19.812,39.938z"></path><path fill="#FFF" d="M18 30A2 2 0 1 0 18 34A2 2 0 1 0 18 30Z"></path><path fill="#37474F" d="M14.914,33.597c0.224,0.505,0.02,1.162-0.51,1.318c-3.301,0.973-6.146,1.102-8.297,1.102c-0.644-0.619-1.194-1.279-1.656-1.963c2.585,0,6.71-0.12,9.144-0.966C14.117,32.906,14.69,33.09,14.914,33.597z M2,27c0,0,1.875,0.125,3-1c1.875,1.688,5.94,1.088,7,0c1.063,1.688,6.938,1.375,8,0c1.25,1.438,6.625,1.75,8,0c0.479,1.461,6.819,1.874,8,0c1.061,1.088,5.063,1.938,7.311,0C43.875,27.188,46,27,46,27v1H2 M17,32c0,0.552,0.448,1,1,1s1-0.448,1-1s-0.448-1-1-1S17,31.448,17,32z"></path><path fill="#01579B" d="M11,24H6v-5h5V24z M21,19h-5v5h5V19z M31,19h-5v5h5V19z M16,14h-5v5h5V14z M26,14h-5v5h5V14z"></path><path fill="#0288D1" d="M16,24h-5v-5h5V24z M26,19h-5v5h5V19z M26,9h-5v5h5V9z M21,14h-5v5h5V14z"></path></svg>`,
@@ -226,45 +226,45 @@ export const technologyIcons: Tecnologia[] = [
   {
     nombre: "AWS",
     icono: (
-      <img src="/icons/aws.svg" alt="Icon AWS" className="w-full h-full object-contain" />
+      <img src="/icons/aws.svg" alt="Icon AWS" className="w-full h-full object-contain" loading="lazy" decoding="async" />
     )
   },
   {
     nombre: "Azure",
     icono: (
-      <img src="/icons/azure.svg" alt="Icon Azure" className="w-full h-full object-contain" />
+      <img src="/icons/azure.svg" alt="Icon Azure" className="w-full h-full object-contain" loading="lazy" decoding="async" />
     )
   },
   {
     nombre: "Figma",
     icono: (
-      <img src="/icons/figma.svg" alt="Icon Figma" className="w-full h-full object-contain" />
+      <img src="/icons/figma.svg" alt="Icon Figma" className="w-full h-full object-contain" loading="lazy" decoding="async" />
     )
   },
   {
     nombre: "Kubernetes",
     icono: (
-      <img src="/icons/kubernetes.svg" alt="Icon Kubernetes" className="w-full h-full object-contain" />
+      <img src="/icons/kubernetes.svg" alt="Icon Kubernetes" className="w-full h-full object-contain" loading="lazy" decoding="async" />
     )
   },
   {
     nombre: "Linux",
     icono: (
-      <img src="/icons/linux.svg" alt="Icon Linux" className="w-full h-full object-contain" />
+      <img src="/icons/linux.svg" alt="Icon Linux" className="w-full h-full object-contain" loading="lazy" decoding="async" />
     ),
     colors: ['#FFD133', '#f5a623', '#ffc200', '#e6b800'],
   },
   {
     nombre: "Postman",
     icono: (
-      <img src="/icons/postman.svg" alt="Icon Postman" className="w-full h-full object-contain" />
+      <img src="/icons/postman.svg" alt="Icon Postman" className="w-full h-full object-contain" loading="lazy" decoding="async" />
     ),
     colors: ['#FF6C37', '#e65c2a', '#ff8c5a', '#ffa07a'],
   },
   {
     nombre: "SQL",
     icono: (
-      <img src="/icons/SQL.svg" alt="Icon SQL" className="w-full h-full object-contain" />
+      <img src="/icons/SQL.svg" alt="Icon SQL" className="w-full h-full object-contain" loading="lazy" decoding="async" />
     ),
     colors: ['#336791', '#4479a1', '#5dade2', '#2874a6'],
   },
