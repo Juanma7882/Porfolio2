@@ -7,8 +7,9 @@ const icon = Object.fromEntries(
 
 export const proyectos: Proyecto[] = [
   {
-    titulo: "projects.restaurant.title",
-    descripcion: "projects.restaurant.description",
+    slug: "la-parrilla-de-don-juan",
+    titulo: "projects.parrillaDonJuan.title",
+    descripcion: "projects.parrillaDonJuan.description",
     imagenes: [
       "/img/projects/restaurant/restaurante.webp",
       "/img/projects/restaurant/restaurante2.webp",
@@ -18,12 +19,22 @@ export const proyectos: Proyecto[] = [
     ],
     tecnologias: [
       { nombre: "Angular", icono: icon["Angular"] },
+      { nombre: "Ionic", icono: icon["Ionic"] },
+      { nombre: "Capacitor", icono: icon["Capacitor"] },
       { nombre: "Supabase", icono: icon["Supabase"] },
+      { nombre: "Chart.js", icono: icon["Chart.js"] },
     ],
-    github: "https://github.com/Juanma7882/",
-    pagina: "https://clima-cyan.vercel.app/",
+    github: "https://github.com/Juanma7882/la-parrilla-de-don-juan-2026",
+    pagina: "",
+    detalle: {
+      participacion: { texto: "projects.parrillaDonJuan.detail.participacion" },
+      diseno: { texto: "projects.parrillaDonJuan.detail.diseno" },
+      alcance: { texto: "projects.parrillaDonJuan.detail.alcance" },
+      solucion: { texto: "projects.parrillaDonJuan.detail.solucion" },
+    },
   },
   {
+    slug: "hotel-self-service",
     titulo: "projects.self-service-for-hotel.title",
     descripcion: "projects.self-service-for-hotel.description",
     imagenes: [
@@ -39,11 +50,20 @@ export const proyectos: Proyecto[] = [
       { nombre: "Node.js", icono: icon["Node.js"] },
       { nombre: "JavaScript", icono: icon["JavaScript"] },
       { nombre: "EJS", icono: icon["JavaScript"] },
+      { nombre: "MySQL", icono: icon["MySQL"] },
+      { nombre: "Docker", icono: icon["Docker"] },
     ],
-    github: "https://github.com/Juanma7882/clima",
-    pagina: "https://clima-cyan.vercel.app/",
+    github: "",
+    pagina: "",
+    detalle: {
+      participacion: { texto: "projects.self-service-for-hotel.detail.participacion" },
+      diseno: { texto: "projects.self-service-for-hotel.detail.diseno" },
+      alcance: { texto: "projects.self-service-for-hotel.detail.alcance" },
+      solucion: { texto: "projects.self-service-for-hotel.detail.solucion" },
+    },
   },
   {
+    slug: "hackathon",
     titulo: "projects.hackathon.title",
     descripcion: "projects.hackathon.description",
     imagenes: [
@@ -56,10 +76,17 @@ export const proyectos: Proyecto[] = [
       { nombre: "Node.js", icono: icon["Node.js"] },
       { nombre: "Docker", icono: icon["Docker"] },
     ],
-    github: "https://github.com/Juanma7882/clima",
-    pagina: "https://clima-cyan.vercel.app/",
+    github: "https://github.com/Juanma7882/hackaton-midu",
+    pagina: "",
+    detalle: {
+      participacion: { texto: "projects.hackathon.detail.participacion" },
+      diseno: { texto: "projects.hackathon.detail.diseno" },
+      alcance: { texto: "projects.hackathon.detail.alcance" },
+      solucion: { texto: "projects.hackathon.detail.solucion" },
+    },
   },
   {
+    slug: "powertype",
     titulo: "projects.PowerType.title",
     descripcion: "projects.PowerType.description",
     imagenes: [
@@ -67,11 +94,21 @@ export const proyectos: Proyecto[] = [
       "/img/projects/consola/consola1.webp",
       "/img/projects/consola/consola2.webp",
     ],
-    tecnologias: [{ nombre: "Git", icono: icon["Git"] }],
-    github: "https://github.com/Juanma7882/clima",
-    pagina: "https://clima-cyan.vercel.app/",
+    tecnologias: [
+      { nombre: "PowerShell", icono: icon["PowerShell"] },
+      { nombre: "Git", icono: icon["Git"] },
+    ],
+    github: "https://github.com/AnderssonPeter/PowerType",
+    pagina: "",
+    detalle: {
+      participacion: { texto: "projects.PowerType.detail.participacion" },
+      diseno: { texto: "projects.PowerType.detail.diseno" },
+      alcance: { texto: "projects.PowerType.detail.alcance" },
+      solucion: { texto: "projects.PowerType.detail.solucion" },
+    },
   },
   {
+    slug: "weather-app",
     titulo: "projects.weatherApp.title",
     descripcion: "projects.weatherApp.description",
     imagenes: [
@@ -93,6 +130,7 @@ export const proyectos: Proyecto[] = [
     pagina: "https://clima-cyan.vercel.app/",
   },
   {
+    slug: "dealership-manager",
     titulo: "projects.dealershipManager.title",
     descripcion: "projects.dealershipManager.description",
     imagenes: [
@@ -109,6 +147,7 @@ export const proyectos: Proyecto[] = [
     pagina: "",
   },
   {
+    slug: "pygame",
     titulo: "projects.pygame.title",
     descripcion: "projects.pygame.description",
     imagenes: [
@@ -125,6 +164,7 @@ export const proyectos: Proyecto[] = [
     pagina: "",
   },
   {
+    slug: "blog-api",
     titulo: "projects.blog.title",
     descripcion: "projects.blog.description",
     imagenes: [
@@ -138,5 +178,64 @@ export const proyectos: Proyecto[] = [
     ],
     github: "https://github.com/Juanma7882/Blog",
     pagina: "",
+  },
+  {
+    slug: "sistema-venta",
+    titulo: "projects.sistemaVenta.title",
+    descripcion: "projects.sistemaVenta.description",
+    imagenes: [],
+    tecnologias: [
+      { nombre: "C#", icono: icon["C#"] },
+      { nombre: ".NET", icono: icon[".NET"] },
+      { nombre: "SQL Server", icono: icon["SQL Server"] },
+    ],
+    github: "https://github.com/Juanma7882/VentaDotNet",
+    pagina: "",
+    detalle: {
+      participacion: { texto: "projects.sistemaVenta.detail.participacion" },
+      diseno: { texto: "projects.sistemaVenta.detail.diseno" },
+      alcance: { texto: "projects.sistemaVenta.detail.alcance" },
+      solucion: { texto: "projects.sistemaVenta.detail.solucion" },
+    },
+  },
+  {
+    slug: "e-commerce",
+    titulo: "projects.E-commerce.title",
+    descripcion: "projects.E-commerce.description",
+    imagenes: [],
+    tecnologias: [
+      { nombre: "Node.js", icono: icon["Node.js"] },
+      { nombre: "TypeScript", icono: icon["TypeScript"] },
+      { nombre: "React", icono: icon["React"] },
+      { nombre: "Tailwind", icono: icon["Tailwind"] },
+      { nombre: "PostgreSQL", icono: icon["PostgreSQL"] },
+    ],
+    github: "",
+    pagina: "https://e-commerce-js-xi.vercel.app",
+    detalle: {
+      participacion: { texto: "projects.E-commerce.detail.participacion" },
+      diseno: { texto: "projects.E-commerce.detail.diseno" },
+      alcance: { texto: "projects.E-commerce.detail.alcance" },
+      solucion: { texto: "projects.E-commerce.detail.solucion" },
+    },
+  },
+  {
+    slug: "meta-api-automation",
+    titulo: "projects.metaApiAutomation.title",
+    descripcion: "projects.metaApiAutomation.description",
+    imagenes: [],
+    tecnologias: [
+      { nombre: "NestJS", icono: icon["NestJS"] },
+      { nombre: "PostgreSQL", icono: icon["PostgreSQL"] },
+      { nombre: "Docker", icono: icon["Docker"] },
+    ],
+    github: "",
+    pagina: "",
+    detalle: {
+      participacion: { texto: "projects.metaApiAutomation.detail.participacion" },
+      diseno: { texto: "projects.metaApiAutomation.detail.diseno" },
+      alcance: { texto: "projects.metaApiAutomation.detail.alcance" },
+      solucion: { texto: "projects.metaApiAutomation.detail.solucion" },
+    },
   },
 ];

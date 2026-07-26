@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import type { Swiper as SwiperType } from 'swiper';
@@ -108,14 +109,16 @@ const ProyectoCard = ({ proyecto, index, inView }: { proyecto: Proyecto; index: 
                     <p>{t(proyecto.descripcion)}</p>
 
                     <div className="w-full flex gap-2">
-                        <a
-                            href={proyecto.github}
-                            className="shimmer-btn flex-1 py-3 px-6 rounded-xl border border-gray-500/40 dark:text-white font-semibold text-center active:scale-95 transition-all"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            GitHub
-                        </a>
+                        {proyecto.github && (
+                            <a
+                                href={proyecto.github}
+                                className="shimmer-btn flex-1 py-3 px-6 rounded-xl border border-gray-500/40 dark:text-white font-semibold text-center active:scale-95 transition-all"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                GitHub
+                            </a>
+                        )}
                         {proyecto.pagina && (
                             <a
                                 href={proyecto.pagina}
@@ -128,6 +131,12 @@ const ProyectoCard = ({ proyecto, index, inView }: { proyecto: Proyecto; index: 
                             </a>
                         )}
                     </div>
+                    <Link
+                        to={`/proyectos/${proyecto.slug}`}
+                        className="w-full py-3 px-6 rounded-xl border border-gray-500/40 dark:text-white font-semibold text-center active:scale-95 transition-all hover:border-gray-400"
+                    >
+                        {t('projectDetail.viewMore')}
+                    </Link>
                 </div>
             </div>
         </div>
