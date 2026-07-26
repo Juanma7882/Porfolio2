@@ -1,6 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+const gradientText = {
+    background: 'linear-gradient(to right, #2563eb, #9333ea)',
+    WebkitBackgroundClip: 'text' as const,
+    WebkitTextFillColor: 'transparent' as const,
+    backgroundClip: 'text' as const,
+};
+
 const socialLinks = [
     {
         key: "linkedin",
@@ -79,7 +86,7 @@ function ContactMe() {
                     className={`w-full mb-4 text-4xl sm:text-3xl md:text-4xl lg:text-5xl px-4 text-center ${base} ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-6'}`}
                     style={{ transitionDelay: '0ms' }}
                 >
-                    {t("contactMe.title")}
+                    <span style={gradientText}>{t("contactMe.title")}</span>
                 </h2>
 
                 <div className="sm:border sm:border-gray-500 m-2 sm:p-12 flex flex-col gap-8 rounded-xl">

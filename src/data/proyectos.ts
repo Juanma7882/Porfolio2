@@ -84,7 +84,7 @@ export const proyectos: Proyecto[] = [
       "/img/projects/weather/celularclima3.webp",
     ],
     tecnologias: [
-      { nombre: "HTML", icono: icon["HTML"] },
+      { nombre: "HTML5", icono: icon["HTML5"] },
       { nombre: "CSS3", icono: icon["CSS3"] },
       { nombre: "JavaScript", icono: icon["JavaScript"] },
       { nombre: "Vite", icono: icon["Vite"] },

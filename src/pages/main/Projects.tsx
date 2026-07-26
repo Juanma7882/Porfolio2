@@ -4,6 +4,13 @@ import { proyectos } from '../../data/proyectos';
 import ProyectoCard from '../../components/ProyectoCard';
 import { LogoCarousel } from '../components/logo-carrusel/LogoCarrusel';
 
+const gradientText = {
+    background: 'linear-gradient(to right, #2563eb, #9333ea)',
+    WebkitBackgroundClip: 'text' as const,
+    WebkitTextFillColor: 'transparent' as const,
+    backgroundClip: 'text' as const,
+};
+
 function Projects() {
     const sectionRef = useRef<HTMLElement>(null);
     const [inView, setInView] = useState(false);
@@ -34,7 +41,9 @@ function Projects() {
                 <LogoCarousel duration={45} gap={20} cardSize={120} />
             </div>
             <section ref={sectionRef} id="projects" className='bg-white dark:bg-black dark:text-white min-h-screen flex items-center justify-center flex-col px-4 gap-10 scroll-mt-20 pt-11'>
-                <h2 className='w-full mb-4 text-4xl sm:text-3xl md:text-4xl lg:text-5xl px-4 text-center'>Mis Proyectos</h2>
+                <h2 className='w-full mb-4 text-4xl sm:text-3xl md:text-4xl lg:text-5xl px-4 text-center'>
+                    <span style={gradientText}>Mis Proyectos</span>
+                </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:mx-10 xl:mx-20">
                     {proyectos.map((proyecto, index) => (
                         <ProyectoCard proyecto={proyecto} key={index} index={index} inView={inView} />

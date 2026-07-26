@@ -2,6 +2,13 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { technologyIcons } from "../../data/icons";
 
+const gradientText = {
+    background: 'linear-gradient(to right, #2563eb, #9333ea)',
+    WebkitBackgroundClip: 'text' as const,
+    WebkitTextFillColor: 'transparent' as const,
+    backgroundClip: 'text' as const,
+};
+
 function Technology() {
     const { t } = useTranslation();
     const sectionRef = useRef<HTMLElement>(null);
@@ -88,7 +95,7 @@ function Technology() {
                 className={`w-full mb-4 text-4xl sm:text-3xl md:text-4xl lg:text-5xl px-4 text-center transition-all duration-700 ease-out ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-6'}`}
                 style={{ transitionDelay: '0ms' }}
             >
-                {t("technologies.title")}
+                <span style={gradientText}>{t("technologies.title")}</span>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2">
                 {tecnologiasPorCategoria.map((categoria, i) => {
@@ -109,7 +116,9 @@ function Technology() {
                                     const isHovered = hoveredIcon === `${i}-${j}`;
                                     return (
                                         <div
-                                            key={j}
+                                        
+
+                                        key={j}
                                             className="flex flex-col items-center w-20 gap-2 cursor-default"
                                             onMouseEnter={() => setHoveredIcon(`${i}-${j}`)}
                                             onMouseLeave={() => setHoveredIcon(null)}
