@@ -29,4 +29,5 @@ export interface Proyecto {
   github: string;
   pagina: string;
   detalle?: DetalleProyecto;
+  featured?: "hero" | "feature-tall" | "feature-wide";
 }

@@ -20,10 +20,13 @@
     "about": {
         "title": "About Me",
         "intro": "My name is <0>Juan Manuel Fernández</0>, and I’m a <1>full stack developer</1> from Buenos Aires, Argentina.",
-        "skillsIntro": "I’m looking for new opportunities that will allow me to continue growing professionally. My favorite programming languages are <0>Python</0>, <1>C#</1>, and <2>JavaScript</2>.",
+        "skillsIntro": "I’m looking for new opportunities that will allow me to continue growing professionally. My favorite programming languages are <0>C#</0> and <1>JavaScript</1>.",
         "experience": "I recently <0>graduated</0> from the Programming Technician program at the National Technological University. Throughout my studies I built projects across different areas — mobile apps, web systems, REST APIs, and an AI-powered interview platform — gaining hands-on experience across the full stack. I also have a <1>B1 level in English</1> and I’m constantly improving."
     },
     "projects": {
+        "filters": {
+            "all": "All Technologies"
+        },
         "weatherApp": {
             "title": "Weather App",
             "description": "Weather application developed with JavaScript. It allows you to check the current weather along with additional information. You can also view the hourly forecast and the forecast for the next six days, using multiple APIs."
@@ -91,7 +94,7 @@
             }
         },
         "metaApiAutomation": {
-            "title": "Meta API Automation",
+            "title": "AI Automations",
             "description": "Automated WhatsApp/Meta support bot powered by an LLM that understands user intent and performs dynamic actions: checking the menu, taking orders, receiving payments, and scheduling appointments.",
             "detail": {
                 "participacion": "End-to-end development of the project, sold as a solution to a real client.",

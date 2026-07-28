@@ -15,13 +15,15 @@ function StoryBeat({
     eyebrow,
     text,
     glowColor,
-    imagen,
+    imagenes,
+    initialSlide = 0,
 }: {
     align: 'left' | 'right';
     eyebrow: string;
     text: string;
     glowColor: string;
-    imagen?: string;
+    imagenes?: string[];
+    initialSlide?: number;
 }) {
     const ref = useRef<HTMLDivElement>(null);
     const [inView, setInView] = useState(false);
@@ -71,23 +73,38 @@ function StoryBeat({
                 }}
                 aria-hidden="true"
             />
-            {imagen ? (
+            {imagenes && imagenes.length > 0 ? (
                 <div
                     className={`pl-10 md:pl-0 flex flex-col gap-4 md:flex-row md:items-center md:gap-[8%] ${isRight ? 'md:flex-row-reverse' : ''
                         }`}
                 >
                     <div className="md:w-[46%]">{card}</div>
                     <div
-                        className="md:w-[46%] rounded-2xl overflow-hidden border aspect-video"
+                        className="md:w-[46%] rounded-2xl overflow-hidden border h-64 sm:h-72 md:h-80 w-full"
                         style={{ borderColor: `${glowColor}40`, backgroundColor: `${glowColor}0d` }}
                     >
-                        <img
-                            src={imagen}
-                            alt={eyebrow}
-                            className="w-full h-full object-cover"
-                            loading="lazy"
-                            decoding="async"
-                        />
+                        <Swiper
+                            spaceBetween={0}
+                            centeredSlides={true}
+                            initialSlide={initialSlide}
+                            loop={imagenes.length > 1}
+                            pagination={{ clickable: true }}
+                            navigation={true}
+                            modules={[Pagination, Navigation]}
+                            className="mySwiper h-full"
+                        >
+                            {imagenes.map((img, i) => (
+                                <SwiperSlide key={i}>
+                                    <img
+                                        src={img}
+                                        alt={`${eyebrow}-${i}`}
+                                        className="swiper-slide"
+                                        loading="lazy"
+                                        decoding="async"
+                                    />
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
                     </div>
                 </div>
             ) : (
@@ -146,35 +163,6 @@ function ProyectoDetalle() {
                     <h1 className="text-3xl sm:text-4xl font-bold text-center">{t(proyecto.titulo)}</h1>
                 </div>
 
-                <div className="w-full h-72 md:h-96">
-                    {proyecto.imagenes.length > 0 ? (
-                        <Swiper
-                            spaceBetween={30}
-                            centeredSlides={true}
-                            pagination={{ clickable: true }}
-                            navigation={true}
-                            modules={[Pagination, Navigation]}
-                            className="mySwiper h-full"
-                        >
-                            {proyecto.imagenes.map((img, i) => (
-                                <SwiperSlide key={i}>
-                                    <img
-                                        src={img}
-                                        alt={`slide-${i}`}
-                                        className="swiper-slide"
-                                        loading="lazy"
-                                        decoding="async"
-                                    />
-                                </SwiperSlide>
-                            ))}
-                        </Swiper>
-                    ) : (
-                        <div className="h-full flex items-center justify-center border border-dashed border-gray-500/40 rounded-2xl text-gray-500 dark:text-gray-400 text-center px-6">
-                            {t('projectDetail.noImages')}
-                        </div>
-                    )}
-                </div>
-
                 <div className="flex justify-center items-center gap-2 flex-wrap">
                     {proyecto.tecnologias.map((tec, i) => {
                         const color = technologyIcons.find(
@@ -206,16 +194,22 @@ function ProyectoDetalle() {
                             aria-hidden="true"
                         />
                         <div className="flex flex-col gap-12 md:gap-16">
-                            {detalleSecciones.map(([key, seccion], i) => (
-                                <StoryBeat
-                                    key={key}
-                                    align={i % 2 === 0 ? 'left' : 'right'}
-                                    eyebrow={t(`projectDetail.sections.${key}`)}
-                                    text={t(seccion.texto)}
-                                    imagen={seccion.imagen}
-                                    glowColor={glowColor}
-                                />
-                            ))}
+                            {detalleSecciones.map(([key, seccion], i) => {
+                                const anchorIndex = seccion.imagen
+                                    ? proyecto.imagenes.indexOf(seccion.imagen)
+                                    : -1;
+                                return (
+                                    <StoryBeat
+                                        key={key}
+                                        align={i % 2 === 0 ? 'left' : 'right'}
+                                        eyebrow={t(`projectDetail.sections.${key}`)}
+                                        text={t(seccion.texto)}
+                                        imagenes={seccion.imagen ? proyecto.imagenes : undefined}
+                                        initialSlide={anchorIndex > 0 ? anchorIndex : 0}
+                                        glowColor={glowColor}
+                                    />
+                                );
+                            })}
                         </div>
                     </div>
                 )}

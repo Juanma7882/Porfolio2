@@ -19,7 +19,7 @@ function HomePage() {
                 <Navbar />
             </header>
             <main>
-                <Suspense fallback={<div className='min-h-screen' />}>
+                <Suspense fallback={<div className='min-h-screen bg-white dark:bg-black' />}>
                     <Home />
                     <AboutMe />
                     <Projects />
@@ -61,7 +61,7 @@ function App() {
                 <Route
                     path="/proyectos/:slug"
                     element={
-                        <Suspense fallback={<div className='min-h-screen' />}>
+                        <Suspense fallback={<div className='min-h-screen bg-white dark:bg-black' />}>
                             <ProyectoDetalle />
                         </Suspense>
                     }

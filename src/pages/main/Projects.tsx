@@ -1,7 +1,8 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import '../../styles/index.css';
 import { proyectos } from '../../data/proyectos';
 import ProyectoCard from '../../components/ProyectoCard';
+import TechFilter from '../../components/TechFilter';
 import { LogoCarousel } from '../components/logo-carrusel/LogoCarrusel';
 
 const gradientText = {
@@ -14,6 +15,30 @@ const gradientText = {
 function Projects() {
     const sectionRef = useRef<HTMLElement>(null);
     const [inView, setInView] = useState(false);
+    const [selectedTechs, setSelectedTechs] = useState<Set<string>>(new Set());
+
+    const toggleTech = (tech: string) => {
+        if (tech === '__all__') {
+            setSelectedTechs(new Set());
+            return;
+        }
+        setSelectedTechs(prev => {
+            const next = new Set(prev);
+            if (next.has(tech)) {
+                next.delete(tech);
+            } else {
+                next.add(tech);
+            }
+            return next;
+        });
+    };
+
+    const filteredProyectos = useMemo(() => {
+        if (selectedTechs.size === 0) return proyectos;
+        return proyectos.filter(p =>
+            p.tecnologias.some(tec => selectedTechs.has(tec.nombre))
+        );
+    }, [selectedTechs]);
 
     useEffect(() => {
         const el = sectionRef.current;
@@ -44,10 +69,26 @@ function Projects() {
                 <h2 className='w-full mb-4 text-4xl sm:text-3xl md:text-4xl lg:text-5xl px-4 text-center'>
                     <span style={gradientText}>Mis Proyectos</span>
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:mx-10 xl:mx-20">
-                    {proyectos.map((proyecto, index) => (
-                        <ProyectoCard proyecto={proyecto} key={index} index={index} inView={inView} />
-                    ))}
+                <TechFilter proyectos={proyectos} selected={selectedTechs} onToggle={toggleTech} />
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:auto-rows-55 lg:grid-flow-dense lg:mx-10 xl:mx-20">
+                    {filteredProyectos.map((proyecto, index) => {
+                        const featured = proyecto.featured;
+                        const variant = featured === 'hero' ? 'hero' : featured ? 'feature' : 'compact';
+                        const wide = featured === 'feature-wide';
+                        const spanClass =
+                            featured === 'hero'
+                                ? 'lg:col-span-2 lg:row-span-2'
+                                : featured === 'feature-tall'
+                                    ? 'lg:row-span-2'
+                                    : featured === 'feature-wide'
+                                        ? 'lg:col-span-2'
+                                        : '';
+                        return (
+                            <div key={proyecto.slug} className={spanClass}>
+                                <ProyectoCard proyecto={proyecto} index={index} inView={inView} variant={variant} wide={wide} />
+                            </div>
+                        );
+                    })}
                 </div>
             </section>
         </>

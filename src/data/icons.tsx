@@ -340,4 +340,18 @@ export const technologyIcons: Tecnologia[] = [
     ),
     colors: ['#00758f', '#e48e00'],
   },
+  {
+    nombre: "n8n",
+    icono: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="40" height="40" className="w-full h-full">
+        <path d="M15.5 21L32.5 13" stroke="#EA4B71" strokeWidth="3" strokeLinecap="round" />
+        <path d="M15.5 27L32.5 35" stroke="#EA4B71" strokeWidth="3" strokeLinecap="round" />
+        <circle cx="10" cy="24" r="6" fill="#EA4B71" />
+        <circle cx="38" cy="12" r="6" fill="#EA4B71" />
+        <circle cx="38" cy="36" r="6" fill="#EA4B71" />
+      </svg>
+    ),
+    colors: ['#EA4B71', '#f06d8f', '#c93a5c'],
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M15.5 21L32.5 13" stroke="#EA4B71" stroke-width="3" stroke-linecap="round"/><path d="M15.5 27L32.5 35" stroke="#EA4B71" stroke-width="3" stroke-linecap="round"/><circle cx="10" cy="24" r="6" fill="#EA4B71"/><circle cx="38" cy="12" r="6" fill="#EA4B71"/><circle cx="38" cy="36" r="6" fill="#EA4B71"/></svg>`,
+  },
 ];

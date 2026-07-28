@@ -92,7 +92,6 @@ function AboutMe() {
               <Trans
                 i18nKey="about.skillsIntro"
                 components={[
-                  <span key="python" style={{ color: '#FFD43B' }} />,
                   <span key="csharp" style={{ color: '#a179dc' }} />,
                   <span key="js" style={{ color: '#F7DF1E' }} />,
                 ]}

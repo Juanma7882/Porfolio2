@@ -20,10 +20,13 @@
     "about": {
         "title": "Sobre mi",
         "intro": "Soy <0>Juan Manuel Fernández</0>, <1>desarrollador full stack</1> de Buenos Aires, Argentina.",
-        "skillsIntro": " Estoy en busca de nuevas oportunidades que me permitan seguir creciendo profesionalmente. Mis lenguajes favoritos son <0>Python</0>, <1>C#</1> y <2>JavaScript</2>.",
+        "skillsIntro": " Estoy en busca de nuevas oportunidades que me permitan seguir creciendo profesionalmente. Mis lenguajes favoritos son <0>C#</0> y <1>JavaScript</1>.",
         "experience": "Recientemente me <0>recibí</0> de la Tecnicatura en Programación en la Universidad Tecnológica Nacional. A lo largo de la carrera desarrollé proyectos en distintas áreas — aplicaciones móviles, sistemas web, APIs REST y una plataforma de entrevistas con IA — adquiriendo experiencia práctica en todo el stack. También tengo un <1>nivel B1 en inglés</1> y estoy en constante mejora."
     },
     "projects": {
+        "filters": {
+            "all": "Todas las tecnologías"
+        },
         "weatherApp": {
             "title": "Aplicación del Clima",
             "description": "Esta es una aplicación del clima desarrollada con JavaScript. Permite consultar el clima actual junto con información adicional, además de proporcionar el pronóstico por horas y para los próximos seis días de la semana consumiendo varias APIs."
@@ -91,7 +94,7 @@
             }
         },
         "metaApiAutomation": {
-            "title": "Automatización con Meta API",
+            "title": "Automatizaciones de IA",
             "description": "Bot de atención automatizada para WhatsApp/Meta impulsado por un LLM que interpreta la intención del usuario y ejecuta acciones dinámicas: consultar el menú, tomar pedidos, recibir pagos y agendar citas.",
             "detail": {
                 "participacion": "Desarrollo end-to-end del proyecto, vendido como solución a un cliente real.",
