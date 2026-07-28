@@ -163,6 +163,31 @@ function ProyectoDetalle() {
                     <h1 className="text-3xl sm:text-4xl font-bold text-center">{t(proyecto.titulo)}</h1>
                 </div>
 
+                {detalleSecciones.length === 0 && proyecto.imagenes.length > 0 && (
+                    <div className="w-full h-72 md:h-96">
+                        <Swiper
+                            spaceBetween={30}
+                            centeredSlides={true}
+                            pagination={{ clickable: true }}
+                            navigation={true}
+                            modules={[Pagination, Navigation]}
+                            className="mySwiper h-full"
+                        >
+                            {proyecto.imagenes.map((img, i) => (
+                                <SwiperSlide key={i}>
+                                    <img
+                                        src={img}
+                                        alt={`slide-${i}`}
+                                        className="swiper-slide"
+                                        loading="lazy"
+                                        decoding="async"
+                                    />
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </div>
+                )}
+
                 <div className="flex justify-center items-center gap-2 flex-wrap">
                     {proyecto.tecnologias.map((tec, i) => {
                         const color = technologyIcons.find(
