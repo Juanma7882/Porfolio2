@@ -9,6 +9,8 @@ import "../../../node_modules/swiper/modules/pagination.css";
 import { proyectos } from '../../data/proyectos';
 import { technologyIcons } from '../../data/icons';
 import DarkModeToggle from '../../components/DarkModeToggle';
+import LanguageToggle from '../../components/LanguageToggle';
+import type { DetalleSeccion } from '../../types';
 
 function StoryBeat({
     align,
@@ -134,23 +136,29 @@ function ProyectoDetalle() {
         t => t.nombre.toLowerCase() === proyecto.tecnologias[0]?.nombre.toLowerCase()
     )?.colors?.[0] ?? '#6b7280';
 
-    const detalleSecciones = proyecto.detalle
-        ? ([
+    const detalleSecciones: readonly (readonly [string, DetalleSeccion])[] = proyecto.detalle
+        ? [
             ['participacion', proyecto.detalle.participacion],
+            ...(proyecto.detalle.metodologia
+                ? [['metodologia', proyecto.detalle.metodologia] as const]
+                : []),
             ['diseno', proyecto.detalle.diseno],
             ['alcance', proyecto.detalle.alcance],
             ['solucion', proyecto.detalle.solucion],
-        ] as const)
+        ]
         : [];
 
     return (
         <div className="min-h-screen bg-white dark:bg-black dark:text-white">
-            <header className="w-full py-4 px-6 flex items-center justify-between border-b border-gray-500/20">
-                <Link to="/" className="flex items-center gap-2 font-semibold hover:text-blue-500 transition-colors">
+            <header className="w-full py-4 px-6 flex items-center justify-between border-b border-gray-500/20 sticky top-0 z-10 bg-white shadow-md dark:bg-black">
+                <Link to="/#projects" className="flex items-center gap-2 font-semibold hover:text-blue-500 transition-colors">
                     <span aria-hidden="true">←</span>
                     {t('projectDetail.back')}
                 </Link>
-                <DarkModeToggle />
+                <div className="flex items-center gap-3">
+                    <LanguageToggle />
+                    <DarkModeToggle />
+                </div>
             </header>
 
             <main className="max-w-4xl mx-auto px-4 py-10 flex flex-col gap-8">
@@ -210,6 +218,25 @@ function ProyectoDetalle() {
                 </div>
 
                 <p className="text-lg leading-relaxed">{t(proyecto.descripcion)}</p>
+
+                {proyecto.detalle?.softSkills && (
+                    <div className="flex flex-col items-center gap-3">
+                        <span className="text-xs font-semibold tracking-[0.2em] uppercase text-gray-500 dark:text-gray-400">
+                            {t('projectDetail.softSkillsLabel')}
+                        </span>
+                        <div className="flex justify-center items-center gap-2 flex-wrap">
+                            {(t(proyecto.detalle.softSkills, { returnObjects: true }) as string[]).map((skill, i) => (
+                                <span
+                                    key={i}
+                                    className="text-sm rounded-full px-3 py-1 border"
+                                    style={{ borderColor: `${glowColor}55`, backgroundColor: `${glowColor}12` }}
+                                >
+                                    {skill}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                )}
 
                 {detalleSecciones.length > 0 && (
                     <div className="relative py-4">

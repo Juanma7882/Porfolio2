@@ -1,6 +1,6 @@
 import '../src/styles/index.css'
 import { useEffect, useState, lazy, Suspense } from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Navbar from './Navbar.tsx';
 import './assets/language/changeLanguage.ts'
 import { Oneko } from './components/Oneko.tsx'
@@ -12,6 +12,31 @@ const Technology = lazy(() => import("./pages/main/Technology.tsx"))
 const ContactMe = lazy(() => import("./pages/main/ContactMe.tsx"))
 const ProyectoDetalle = lazy(() => import("./pages/proyectos/ProyectoDetalle.tsx"))
 
+function ScrollToHash() {
+    const { hash } = useLocation();
+
+    useEffect(() => {
+        if (!hash) return;
+
+        const id = hash.slice(1);
+        let attempts = 0;
+
+        const tryScroll = () => {
+            const el = document.getElementById(id);
+            if (el) {
+                el.scrollIntoView({ behavior: 'auto', block: 'start' });
+            } else if (attempts < 20) {
+                attempts += 1;
+                requestAnimationFrame(tryScroll);
+            }
+        };
+
+        tryScroll();
+    }, [hash]);
+
+    return null;
+}
+
 function HomePage() {
     return (
         <>
@@ -20,6 +45,7 @@ function HomePage() {
             </header>
             <main>
                 <Suspense fallback={<div className='min-h-screen bg-white dark:bg-black' />}>
+                    <ScrollToHash />
                     <Home />
                     <AboutMe />
                     <Projects />

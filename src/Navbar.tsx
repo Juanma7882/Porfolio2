@@ -1,16 +1,12 @@
 import DarkModeToggle from './components/DarkModeToggle';
+import LanguageToggle from './components/LanguageToggle';
 import '../src/styles/index.css';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 
 function Navbar() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleLanguage = () => {
-    const newLang = i18n.language === 'en' ? 'es' : 'en';
-    i18n.changeLanguage(newLang);
-  };
 
   return (
     <nav className="w-full py-4 px-6 bg-white shadow-md z-10 fixed top-0 dark:text-white dark:bg-black">
@@ -28,21 +24,8 @@ function Navbar() {
         <ul className="hidden sm:flex gap-4 items-center justify-center text-gray-800 font-medium text-sm sm:text-base dark:text-gray-100">
           <li className="hover:text-blue-500 cursor-pointer"><a href="#contact">{t("navbar.contact")}</a></li>
           <li className='flex items-center justify-center'><DarkModeToggle /></li>
-          <li
-            className="w-5 h-5 hover:scale-110 transition-transform cursor-pointer "
-            onClick={toggleLanguage}
-            title="change language"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
-              className="hover:text-blue-400 transition-colors duration-300">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M4 5h7" />
-              <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
-              <path d="M5 9c0 2.144 2.952 3.908 6.7 4" />
-              <path d="M12 20l4 -9l4 9" />
-              <path d="M19.1 18h-6.2" />
-            </svg>
+          <li className='flex items-center justify-center'>
+            <LanguageToggle />
           </li>
         </ul>
 
@@ -59,16 +42,7 @@ function Navbar() {
           </button>
           <div className="px-4 py-2 flex gap-4 items-center">
             <DarkModeToggle />
-            <button onClick={toggleLanguage} title="change language" className="hover:text-blue-400 transition-colors"> <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
-              className="hover:text-blue-400 transition-colors duration-300">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M4 5h7" />
-              <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
-              <path d="M5 9c0 2.144 2.952 3.908 6.7 4" />
-              <path d="M12 20l4 -9l4 9" />
-              <path d="M19.1 18h-6.2" />
-            </svg></button>
+            <LanguageToggle />
           </div>
         </div>
       </div>

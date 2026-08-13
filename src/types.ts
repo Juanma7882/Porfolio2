@@ -15,9 +15,11 @@ export interface DetalleSeccion {
 
 export interface DetalleProyecto {
   participacion: DetalleSeccion;
+  metodologia?: DetalleSeccion;
   diseno: DetalleSeccion;
   alcance: DetalleSeccion;
   solucion: DetalleSeccion;
+  softSkills?: string;
 }
 
 export interface Proyecto {

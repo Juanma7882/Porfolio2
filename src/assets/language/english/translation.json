@@ -21,7 +21,7 @@
         "title": "About Me",
         "intro": "My name is <0>Juan Manuel Fernández</0>, and I’m a <1>full stack developer</1> from Buenos Aires, Argentina.",
         "skillsIntro": "I’m looking for new opportunities that will allow me to continue growing professionally. My favorite programming languages are <0>C#</0> and <1>JavaScript</1>.",
-        "experience": "I recently <0>graduated</0> from the Programming Technician program at the National Technological University. Throughout my studies I built projects across different areas — mobile apps, web systems, REST APIs, and an AI-powered interview platform — gaining hands-on experience across the full stack. I also have a <1>B1 level in English</1> and I’m constantly improving."
+        "experience": "I recently <0>graduated</0> from the Programming Technician program at the National Technological University. Throughout my studies I built projects across different areas (mobile apps, web systems, REST APIs, and an AI-powered interview platform), gaining hands-on experience across the full stack. I also have a <1>B1 level in English</1> and I’m constantly improving."
     },
     "projects": {
         "filters": {
@@ -50,17 +50,17 @@
                 "participacion": "Team coursework project (Programming III) with Rodrigo Pillaca and Daiana Colque. I led the team and the system's overall architecture: whenever something came up that nobody knew how to solve, I took it on, and I helped teammates get unstuck when they were blocked on their part.",
                 "diseno": "Reservation site installed as a PWA in kiosk mode on a physical screen. Backend with Express + Sequelize on MySQL, a server-side admin panel with EJS, and the whole stack orchestrated with Docker Compose.",
                 "alcance": "Public catalog of rooms and services, shopping cart with date selection, booking-conflict validation before confirming a purchase, ticket generation, and an admin panel with metrics and content management.",
-                "solucion": "Defined the overall architecture together with the team (backend, database, and Docker Compose deployment), and resolved technical blockers that came up across the different parts of the project without being tied to a single layer."
+                "solucion": "This app was built so the hotel can offer guests self-service room booking from a kiosk, without relying on the front desk, cutting down wait times and freeing up staff for other tasks."
             }
         },
         "E-commerce": {
             "title": "E-commerce",
             "description": "Real full-stack e-commerce platform, with an Express + TypeScript + Sequelize backend on PostgreSQL and a React frontend with a complete admin panel. Includes JWT authentication, guest and authenticated carts, checkout, and order management.",
             "detail": {
-                "participacion": "Full stack development on my own, both backend and frontend, including designing the Docker Compose infrastructure.",
+                "participacion": "Full stack development, both backend and frontend, including designing the Docker Compose infrastructure.",
                 "diseno": "Backend organized in Controller → Service → Use-Case layers (for flows requiring transactions across multiple services), with three-stage validation using Zod: validated, standardized, and sanitized. Frontend with React Router, Zustand for cart state, and TanStack Query for remote data.",
                 "alcance": "Product catalog with variants and filters, guest and authenticated cart with merging on login, admin panel with product/category/brand CRUD, order management, and menu-based user permissions.",
-                "solucion": "Access and refresh JWT authentication, cross-tab session sync, and a Docker Compose setup sized to replicate the production VPS's real CPU/RAM limits from the local environment."
+                "solucion": "This platform was built so the client can keep everything organized and manage their orders from a single place, handling products, categories, and sales from the admin panel, simplifying day-to-day operations and helping grow their sales."
             }
         },
         "hackathon": {
@@ -68,9 +68,11 @@
             "description": "AI-powered technical interview simulation platform developed with React, Node.js, and PostgreSQL. The system evaluates open-ended responses using transformer models, providing semantic analysis, scoring, and personalized feedback for software interview preparation.",
             "detail": {
                 "participacion": "Team project with Benjamín for a hackathon. We formed the team past the deadline, after failing to find a partner earlier, so we worked against the clock and reused existing code. I designed the frontend and modified the backend, adapting the project to an architecture we didn't choose.",
+                "metodologia": "Fixed-time sprint with no formal methodology. Constant reprioritization under deadline pressure, remote coordination with my teammate to split frontend/backend work in real time.",
                 "diseno": "Frontend built with React + TypeScript + Vite + Tailwind, backend with Node.js + Express + TypeScript, and PostgreSQL as the database. Answers are evaluated with transformer models for semantic analysis, not just keyword matching. Docker Compose for local development and deployment on CubePath via Dokploy.",
                 "alcance": "Technical interview quizzes by module (React, Node.js, SQL, Fullstack) with a configurable timer, free-text answers under time pressure, the correct answer shown after submitting, and a real-time analysis panel with the accumulated score.",
-                "solucion": "Semantic evaluation with transformers grades open-ended answers beyond keyword matching. A technical-exercises section with coding challenges to complement the theoretical evaluation is still pending."
+                "solucion": "This platform was built so people preparing for a technical interview can practice and get immediate, objective feedback on their answers instead of relying on someone else to evaluate them, helping them walk into the real interview more confident.",
+                "softSkills": ["Working under pressure and tight deadlines", "Adaptability (team formed past the deadline, inherited architecture)", "Agile remote communication"]
             }
         },
         "PowerType": {
@@ -80,7 +82,7 @@
                 "participacion": "Contribution to a fork of PowerType, an open-source PowerShell autocomplete tool (10 commits of my own on top of the original repository). I worked within the existing command dictionaries instead of starting from scratch, following the architecture and conventions already defined by the project.",
                 "diseno": "PowerType integrates with PSReadLine to show command predictions in real time. Each supported CLI tool (git, docker, npm, adb) has its own PowerShell dictionary (.ps1) describing subcommands and parameters, loaded by the core module.",
                 "alcance": "I extended the existing command dictionaries and improved suggestion compatibility for various CLI commands, following the same format already used by the project's git and npm dictionaries.",
-                "solucion": "Since each tool has an independent dictionary, support for a new CLI can be added or extended without touching the core suggestion engine or any of the other existing integrations."
+                "solucion": "This contribution means any developer using PowerShell gets more complete suggestions for the CLI tools they already use daily (git, docker, npm, adb), saving time and cutting down on typing errors in the terminal."
             }
         },
         "sistemaVenta": {
@@ -90,7 +92,7 @@
                 "participacion": "I built the entire project on my own, from the database design to documenting the API with Swagger.",
                 "diseno": "Layered architecture (API, BLL, DAL, DTO, IOC, Model, Utility) separating presentation, business logic, and data access. Entity Framework Core as the ORM and AutoMapper for mapping between entities and DTOs.",
                 "alcance": "User management with roles and permissions (Admin, Employee, Supervisor), products, categories, sales with line items, and report generation by date range.",
-                "solucion": "REST endpoints documented with Swagger, organized by controller, with native .NET dependency injection and a navigation menu whose access varies depending on the authenticated user's role."
+                "solucion": "This API was built so a business can manage its sales, products, and users from a single system, with date-range reports that make it easier to make business decisions."
             }
         },
         "metaApiAutomation": {
@@ -100,7 +102,7 @@
                 "participacion": "End-to-end development of the project, sold as a solution to a real client.",
                 "diseno": "Backend built with NestJS, designed to connect to whatever external system the client needs (catalogs, payment gateways, calendars).",
                 "alcance": "The bot understands natural language and, depending on what the person asks for, can fetch the menu, take an order, receive payments, or schedule an appointment.",
-                "solucion": "When the conversation requires it, the chat is handed off to a human agent. Infrastructure runs on Docker with a PostgreSQL database."
+                "solucion": "This bot was built so the business can handle inquiries, take orders, accept payments, and schedule appointments over WhatsApp around the clock without needing someone available at all times, handing the conversation off to a human only when it's actually needed."
             }
         },
         "parrillaDonJuan": {
@@ -108,9 +110,11 @@
             "description": "Full mobile application for restaurant management, built with Angular + Ionic + Capacitor and Supabase as the backend. Covers real-time orders, QR-based table assignment, waiter/kitchen/bar roles, and post-service surveys with charts, built as a team capstone project.",
             "detail": {
                 "participacion": "Team project with Ezequiel Do Campo and Rodrigo Pillaca as a capstone project. I led the team and built the orders module: visual menu, cart, waiter confirmation, and routing to kitchen/bar with real-time updates.",
+                "metodologia": "Team of 3 (lead role). Work organized in sprints, using Trello to organize and distribute tasks. Modules split by teammate (orders, tables, surveys), with Git and cross-reviewed PRs before merging into main.",
                 "diseno": "Hybrid mobile app with Angular 19 + Ionic 8 (standalone components) and Capacitor for native access to camera, QR, vibration, and app lifecycle. Backend on Supabase (Auth, PostgreSQL, Storage, Realtime, and RLS) to sync orders between waiter, kitchen, and bar in real time.",
                 "alcance": "Full order flow: the customer builds a cart from the menu behind their table's QR code, the waiter confirms or rejects it, and the order is automatically routed to kitchen or bar depending on the product, with statuses visible at every step.",
-                "solucion": "Real-time sync via Supabase Realtime between the waiter, kitchen, and bar screens: confirming an order groups it automatically by table and sector, avoiding manual refreshes and keeping the status visible to the customer via QR."
+                "solucion": "This app was built so the restaurant can manage its orders from one place in real time: the waiter, kitchen, and bar all see the same order status instantly, cutting down on errors and delays, speeding up service, and improving the customer experience at every table.",
+                "softSkills": ["Team leadership", "Coordinating tasks across modules", "Communicating with the team to resolve dependencies between orders/tables/kitchen"]
             }
         }
     },
@@ -119,8 +123,10 @@
         "viewMore": "View more",
         "noImages": "No screenshots for this project yet",
         "notFound": "We couldn't find that project",
+        "softSkillsLabel": "Soft skills",
         "sections": {
             "participacion": "My involvement",
+            "metodologia": "Methodology",
             "diseno": "Design",
             "alcance": "Scope",
             "solucion": "Solution"

@@ -31,6 +31,9 @@ export const proyectos: Proyecto[] = [
         texto: "projects.parrillaDonJuan.detail.participacion",
         imagen: "/img/projects/restaurant/restaurante2.webp",
       },
+      metodologia: {
+        texto: "projects.parrillaDonJuan.detail.metodologia",
+      },
       diseno: {
         texto: "projects.parrillaDonJuan.detail.diseno",
         imagen: "/img/projects/restaurant/restaurante3.webp",
@@ -43,6 +46,7 @@ export const proyectos: Proyecto[] = [
         texto: "projects.parrillaDonJuan.detail.solucion",
         imagen: "/img/projects/restaurant/restaurante5.webp",
       },
+      softSkills: "projects.parrillaDonJuan.detail.softSkills",
     },
     featured: "hero",
   },
@@ -88,6 +92,9 @@ export const proyectos: Proyecto[] = [
         texto: "projects.hackathon.detail.participacion",
         imagen: "/img/projects/hackaton/hackaton.webp",
       },
+      metodologia: {
+        texto: "projects.hackathon.detail.metodologia",
+      },
       diseno: {
         texto: "projects.hackathon.detail.diseno",
         imagen: "/img/projects/hackaton/hackaton2.webp",
@@ -100,6 +107,7 @@ export const proyectos: Proyecto[] = [
         texto: "projects.hackathon.detail.solucion",
         imagen: "/img/projects/hackaton/hackaton.webp",
       },
+      softSkills: "projects.hackathon.detail.softSkills",
     },
   },
   {

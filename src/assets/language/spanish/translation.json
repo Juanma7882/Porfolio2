@@ -21,7 +21,7 @@
         "title": "Sobre mi",
         "intro": "Soy <0>Juan Manuel Fernández</0>, <1>desarrollador full stack</1> de Buenos Aires, Argentina.",
         "skillsIntro": " Estoy en busca de nuevas oportunidades que me permitan seguir creciendo profesionalmente. Mis lenguajes favoritos son <0>C#</0> y <1>JavaScript</1>.",
-        "experience": "Recientemente me <0>recibí</0> de la Tecnicatura en Programación en la Universidad Tecnológica Nacional. A lo largo de la carrera desarrollé proyectos en distintas áreas — aplicaciones móviles, sistemas web, APIs REST y una plataforma de entrevistas con IA — adquiriendo experiencia práctica en todo el stack. También tengo un <1>nivel B1 en inglés</1> y estoy en constante mejora."
+        "experience": "Recientemente me <0>recibí</0> de la Tecnicatura en Programación en la Universidad Tecnológica Nacional. A lo largo de la carrera desarrollé proyectos en distintas áreas (aplicaciones móviles, sistemas web, APIs REST y una plataforma de entrevistas con IA), adquiriendo experiencia práctica en todo el stack. También tengo un <1>nivel B1 en inglés</1> y estoy en constante mejora."
     },
     "projects": {
         "filters": {
@@ -50,17 +50,17 @@
                 "participacion": "Trabajo práctico en equipo (Programación III) con Rodrigo Pillaca y Daiana Colque. Lideré el equipo y la arquitectura general del sistema: cuando surgía algo que nadie sabía cómo resolver lo encaraba yo, y ayudaba a mis compañeros a destrabarse cuando se quedaban frenados en su parte.",
                 "diseno": "Sitio de reservas instalado como PWA en modo tótem sobre una pantalla física. Backend en Express + Sequelize sobre MySQL, panel de administración server-side con EJS, y todo el stack orquestado con Docker Compose.",
                 "alcance": "Catálogo público de habitaciones y servicios, carrito de compras con selección de fechas, validación de conflictos de reserva antes de confirmar la compra, generación de ticket y panel de administración con métricas y gestión de contenido.",
-                "solucion": "Definí junto al equipo la arquitectura general (backend, base de datos y despliegue con Docker Compose) y resolví los bloqueos técnicos que fueron surgiendo en las distintas partes del proyecto, sin quedar atado a una sola capa."
+                "solucion": "Se desarrolló esta aplicación para que el hotel pueda ofrecer autoservicio a sus huéspedes desde un tótem, sin depender de recepción para reservar una habitación, reduciendo los tiempos de espera y liberando al personal para otras tareas."
             }
         },
         "E-commerce": {
             "title": "E-commerce",
             "description": "Plataforma de e-commerce full stack real, con backend en Express + TypeScript + Sequelize sobre PostgreSQL y frontend en React con panel de administración completo. Incluye autenticación JWT, carrito de invitado y autenticado, checkout y gestión de pedidos.",
             "detail": {
-                "participacion": "Desarrollo full stack propio, tanto del backend como del frontend, incluyendo el diseño de la infraestructura con Docker Compose.",
+                "participacion": "Desarrollo full stack, tanto del backend como del frontend, incluyendo el diseño de la infraestructura con Docker Compose.",
                 "diseno": "Backend organizado en capas Controller → Service → Use-Case (para flujos que requieren transacciones sobre múltiples servicios), con validación en tres etapas con Zod: validado, estandarizado y saneado. Frontend con React Router, Zustand para el estado del carrito y TanStack Query para datos remotos.",
                 "alcance": "Catálogo de productos con variantes y filtros, carrito de invitado y autenticado con fusión al iniciar sesión, panel de administración con CRUD de productos/categorías/marcas, gestión de pedidos y usuarios con permisos por menú.",
-                "solucion": "Autenticación con JWT de acceso y refresco, sincronización de sesión entre pestañas, e infraestructura Docker Compose dimensionada para replicar los límites reales de CPU/RAM del VPS de producción desde el entorno local."
+                "solucion": "Se desarrolló esta plataforma para que el cliente pueda tener todo organizado y manejar sus pedidos desde un solo lugar, gestionando productos, categorías y ventas desde el panel de administración, simplificando la operación diaria y ayudando a aumentar sus ventas."
             }
         },
         "hackathon": {
@@ -68,9 +68,11 @@
             "description": "Plataforma de simulación de entrevistas técnicas impulsada por IA, desarrollada con React, Node.js y PostgreSQL. El sistema evalúa respuestas abiertas utilizando modelos transformadores, proporcionando análisis semántico, puntuación y retroalimentación personalizada para la preparación de entrevistas de software.",
             "detail": {
                 "participacion": "Proyecto en equipo con Benjamín para un hackathon. Formamos equipo sobre la fecha límite, al no encontrar compañero antes, así que trabajamos contra el tiempo reutilizando código ya existente. Diseñé el frontend y modifiqué el backend, adaptando el proyecto a una arquitectura que no elegimos nosotros.",
+                "metodologia": "Sprint de tiempo fijo sin metodología formal. Priorización constante bajo deadline, coordinación remota con el compañero para dividir frontend/backend en tiempo real.",
                 "diseno": "Frontend en React + TypeScript + Vite + Tailwind, backend en Node.js + Express + TypeScript, con PostgreSQL como base de datos. Las respuestas se evalúan con modelos transformers para análisis semántico, no solo por palabras clave. Docker Compose para desarrollo local y despliegue en CubePath vía Dokploy.",
                 "alcance": "Cuestionarios de entrevistas técnicas por módulo (React, Node.js, SQL, Fullstack) con tiempo configurable, respuesta libre bajo presión de tiempo, corrección visible al finalizar y un panel de análisis en tiempo real con el puntaje acumulado.",
-                "solucion": "La evaluación semántica con transformers permite calificar respuestas abiertas más allá de coincidencias de palabras clave. Queda pendiente un apartado de pruebas técnicas con ejercicios de código para complementar la evaluación teórica."
+                "solucion": "Se desarrolló esta plataforma para que quienes se preparan para una entrevista técnica puedan practicar con feedback inmediato y objetivo sobre sus respuestas, en vez de depender de que otra persona los evalúe, llegando más seguros a la entrevista real.",
+                "softSkills": ["Trabajo bajo presión y plazos ajustados", "Adaptabilidad (equipo armado sobre la fecha límite, arquitectura heredada)", "Comunicación ágil a distancia"]
             }
         },
         "PowerType": {
@@ -80,7 +82,7 @@
                 "participacion": "Contribución a un fork de PowerType, herramienta open source de autocompletado para PowerShell (10 commits propios sobre el repositorio original). Trabajé en los diccionarios de comandos existentes en lugar de partir de cero, respetando la arquitectura y convenciones ya definidas por el proyecto.",
                 "diseno": "PowerType se integra con PSReadLine para mostrar predicciones de comandos en tiempo real. Cada herramienta de CLI soportada (git, docker, npm, adb) tiene su propio diccionario en PowerShell (.ps1) que describe subcomandos y parámetros, cargado por el módulo central.",
                 "alcance": "Amplié los diccionarios de comandos existentes y mejoré la compatibilidad de las sugerencias con distintos comandos de la CLI, siguiendo el mismo formato que ya usaban los diccionarios de git y npm del proyecto.",
-                "solucion": "Al ser diccionarios independientes por herramienta, se puede sumar o extender soporte para una CLI sin tocar el motor central de sugerencias ni el resto de las integraciones ya existentes."
+                "solucion": "Esta contribución permite que cualquier desarrollador que use PowerShell tenga sugerencias más completas para las herramientas de CLI que ya usa a diario (git, docker, npm, adb), ahorrando tiempo y reduciendo errores de tipeo en la terminal."
             }
         },
         "sistemaVenta": {
@@ -90,7 +92,7 @@
                 "participacion": "Desarrollé el proyecto completo en solitario, desde el diseño de la base de datos hasta la documentación de la API con Swagger.",
                 "diseno": "Arquitectura en capas (API, BLL, DAL, DTO, IOC, Model, Utility) que separa la presentación, la lógica de negocio y el acceso a datos. Entity Framework Core como ORM y AutoMapper para el mapeo entre entidades y DTOs.",
                 "alcance": "Gestión de usuarios con roles y permisos (Administrador, Empleado, Supervisor), productos, categorías, ventas con detalle, y generación de reportes por rango de fechas.",
-                "solucion": "Endpoints REST documentados con Swagger, organizados por controlador, con inyección de dependencias nativa de .NET y un menú de navegación cuyo acceso varía según el rol del usuario autenticado."
+                "solucion": "Se desarrolló esta API para que un negocio pueda controlar sus ventas, productos y usuarios desde un mismo sistema, con reportes por rango de fechas que facilitan tomar decisiones sobre el negocio."
             }
         },
         "metaApiAutomation": {
@@ -100,7 +102,7 @@
                 "participacion": "Desarrollo end-to-end del proyecto, vendido como solución a un cliente real.",
                 "diseno": "Backend construido con NestJS, pensado para conectarse a cualquier sistema externo que el cliente necesite (catálogos, pasarelas de pago, agendas).",
                 "alcance": "El bot entiende lenguaje natural y, según lo que pide la persona, puede traer el menú, tomar un pedido, recibir pagos o agendar una cita.",
-                "solucion": "Cuando la conversación lo requiere, el chat se transfiere a un agente humano. Infraestructura con Docker y base de datos PostgreSQL."
+                "solucion": "Se desarrolló este bot para que el negocio pueda atender consultas, tomar pedidos, cobrar y agendar citas por WhatsApp las 24 horas sin depender de que haya alguien disponible todo el tiempo, derivando la conversación a un humano solo cuando realmente hace falta."
             }
         },
         "parrillaDonJuan": {
@@ -108,9 +110,11 @@
             "description": "Aplicación móvil integral para la gestión de un restaurante, desarrollada con Angular + Ionic + Capacitor y Supabase como backend. Cubre pedidos en tiempo real, asignación de mesas vía QR, roles de mozo/cocina/bar y encuestas con gráficos, como proyecto final integrador en equipo.",
             "detail": {
                 "participacion": "Trabajo en equipo con Ezequiel Do Campo y Rodrigo Pillaca como proyecto final integrador. Lideré el equipo y desarrollé el módulo de pedidos: menú visual, carrito, confirmación del mozo y derivación a cocina/bar con actualizaciones en tiempo real.",
+                "metodologia": "Equipo de 3 (rol de líder). Trabajo organizado en sprints, con Trello para la organización y distribución de tareas. Reparto de módulos por integrante (pedidos, mesas, encuestas), con Git y revisión cruzada de PRs antes de integrar a main.",
                 "diseno": "App móvil híbrida con Angular 19 + Ionic 8 (standalone components) y Capacitor para acceso nativo a cámara, QR, vibración y ciclo de vida de la app. Backend en Supabase (Auth, PostgreSQL, Storage, Realtime y RLS) para sincronizar pedidos entre mozo, cocina y bar en tiempo real.",
                 "alcance": "Flujo completo de pedidos: el cliente arma el carrito desde el menú del QR de su mesa, el mozo confirma o rechaza, y el pedido se deriva automáticamente a cocina o bar según el producto, con estados visibles en todo momento.",
-                "solucion": "Sincronización en tiempo real vía Supabase Realtime entre las pantallas de mozo, cocina y bar: al confirmar un pedido se agrupa automáticamente por mesa y sector, evitando refrescos manuales y manteniendo el estado visible para el cliente vía QR."
+                "solucion": "Se desarrolló esta aplicación para que el restaurante pueda gestionar sus pedidos desde un solo lugar en tiempo real: mozo, cocina y bar ven el mismo estado del pedido al instante, evitando errores y demoras, agilizando el servicio y mejorando la experiencia del cliente en cada mesa.",
+                "softSkills": ["Liderazgo de equipo", "Coordinación de tareas entre módulos", "Comunicación con el equipo para resolver dependencias entre pedidos/mesas/cocina"]
             }
         }
     },
@@ -119,8 +123,10 @@
         "viewMore": "Ver más",
         "noImages": "Todavía no hay capturas de este proyecto",
         "notFound": "No encontramos ese proyecto",
+        "softSkillsLabel": "Habilidades blandas",
         "sections": {
             "participacion": "Mi participación",
+            "metodologia": "Metodología",
             "diseno": "Diseño",
             "alcance": "Alcance",
             "solucion": "Solución"
