@@ -70,7 +70,7 @@ function Projects() {
                     <span style={gradientText}>Mis Proyectos</span>
                 </h2>
                 <TechFilter proyectos={proyectos} selected={selectedTechs} onToggle={toggleTech} />
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:auto-rows-55 lg:grid-flow-dense lg:mx-10 xl:mx-20">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:auto-rows-55 lg:grid-flow-dense gap-6 lg:mx-10 xl:mx-20">
                     {filteredProyectos.map((proyecto, index) => {
                         const featured = proyecto.featured;
                         const variant = featured === 'hero' ? 'hero' : featured ? 'feature' : 'compact';

@@ -104,7 +104,7 @@ const ProyectoCard = ({
 
     return (
         <div
-            className={`h-full m-3 transition-all duration-700 ease-out ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            className={`h-full transition-all duration-700 ease-out ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
             style={{ transitionDelay: `${delay}ms` }}
         >
             <Link
